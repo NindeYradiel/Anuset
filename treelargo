@@ -1,0 +1,206 @@
+-rwxr-xr-x  1 saze saze  1800 may 29 20:05 arranque_verificacion.py
+-rwxr-xr-x  1 saze saze  1737 may 29 20:05 check_ia_status.py
+-rwxr-xr-x  1 saze saze  1790 may 29 20:05 cleanup_anu89.sh
+-rwxr-xr-x  1 saze saze  1577 may 29 20:05 copyassets.sh
+-rw-r--r--  1 saze saze 12417 may 30 04:37 diag_anu89_20250530_043704.md
+-rw-r--r--  1 saze saze 12351 may 30 05:04 diag_anu89_20250530_050359.md
+-rw-r--r--  1 saze saze 11810 may 30 05:15 diag_anu89_20250530_051523.md
+-rwxr-xr-x  1 saze saze  5145 may 29 20:05 diag_anu89.sh
+-rwxr-xr-x  1 saze saze  2644 may 29 20:05 diagnostico.sh
+-rwxr-xr-x  1 saze saze  3883 may 29 20:05 docker-compose.generated.yml
+-rwxr-xr-x  1 saze saze  1274 may 29 20:05 docker-compose.override.yml
+-rw-r--r--  1 saze saze  1607 may 30 03:44 docker-compose.yml
+-rw-r--r--  1 saze saze 26820 may 30 05:15 estructura_20250530.txt
+-rw-r--r--  1 saze saze 18972 may 30 00:27 estructura.txt
+-rwxr-xr-x  1 saze saze   441 may 29 20:05 exportar_logs.sh
+-rwxr-xr-x  1 saze saze     0 may 29 20:05 exporting
+-rwxr-xr-x  1 saze saze  1311 may 29 20:05 generate_compose.py
+-rwxr-xr-x  1 saze saze  1469 may 29 20:05 launch.sh
+-rwxr-xr-x  1 saze saze  1069 may 29 20:05 LICENSE
+-rwxr-xr-x  1 saze saze  2406 may 29 20:05 main_controller.py
+-rw-r--r--  1 saze saze  5011 may 30 05:13 Makefile
+-rwxr-xr-x  1 saze saze     0 may 29 20:05 naming
+-rwxr-xr-x  1 saze saze   655 may 29 20:05 nginx.conf
+-rw-r--r--  1 saze saze  3463 may 30 02:29 oldMakefile
+-rw-r--r--  1 saze saze  2017 may 30 02:29 oldMakefile.extra
+-rw-r--r--  1 saze saze    68 may 29 20:05 package.json
+-rwxr-xr-x  1 saze saze 55611 may 29 20:05 package-lock.json
+-rwxr-xr-x  1 saze saze  7047 may 29 20:05 README.en.md
+-rwxr-xr-x  1 saze saze  2443 may 29 20:05 README.md
+-rwxr-xr-x  1 saze saze   727 may 29 20:05 restart_anu89.sh
+-rw-r--r--  1 saze saze   468 may 30 05:12 ritual-banner.txt
+-rwxr-xr-x  1 saze saze  2520 may 29 20:05 Scripts principales del sistema.md
+-rw-r--r--  1 saze saze 32801 may 30 04:46 scriptsAnu.zip
+-rw-r--r--  1 saze saze  3656 may 30 00:33 servicestree
+-rwxr-xr-x  1 saze saze  1945 may 29 20:05 start-internal.sh
+-rwxr-xr-x  1 saze saze  1107 may 29 20:05 start.sh
+-rwxr-xr-x  1 saze saze   653 may 29 20:05 stop.sh
+-rwxr-xr-x  1 saze saze   854 may 29 20:05 sync_to_vault.sh
+-rw-r--r--  1 saze saze 11972 may 30 02:15 treefinal
+-rwxr-xr-x  1 saze saze   535 may 29 20:05 watcher.py
+-rwxr-xr-x  1 saze saze   276 may 29 20:05 windows-launcher.bat
+-rwxr-xr-x  1 saze saze  1078 may 29 20:05 WINDOWS.md
+
+animatediff:
+total 32
+drwxr-xr-x  3 saze saze 4096 may 30 05:28 .
+drwxr-xr-x 15 saze saze 4096 may 30 05:30 ..
+-rw-r--r--  1 saze saze 1422 may 30 03:27 app.py
+-rw-r--r--  1 saze saze  206 may 30 03:27 Dockerfile
+-rw-r--r--  1 saze saze  382 may 30 03:19 download_models.sh
+-rw-r--r--  1 saze saze  349 may 30 03:19 entrypoint.sh
+drwxr-xr-x  3 saze saze 4096 may 30 05:04 models
+-rw-r--r--  1 saze saze   42 may 30 03:27 requirements.txt
+
+anu_visual:
+total 20
+drwxr-xr-x  2 saze saze 4096 may 30 01:10 .
+drwxr-xr-x 15 saze saze 4096 may 30 05:30 ..
+-rw-r--r--  1 saze saze  653 may 29 20:05 AnuuAwakening.tsx
+-rw-r--r--  1 saze saze 1473 may 29 20:05 AnuuCanvas.tsx
+-rw-r--r--  1 saze saze  513 may 29 20:05 AnuuIcon.tsx
+
+archives:
+total 8600
+drwxr-xr-x  2 saze saze    4096 may 30 05:04 .
+drwxr-xr-x 15 saze saze    4096 may 30 05:30 ..
+-rw-r--r--  1 saze saze 8797705 may 29 22:29 services.zip
+
+backups:
+total 56
+drwxr-xr-x 14 saze saze 4096 may 30 05:15 .
+drwxr-xr-x 15 saze saze 4096 may 30 05:30 ..
+drwxr-xr-x  5 saze saze 4096 may 30 04:01 2025-05-30-0401
+drwxr-xr-x  2 saze saze 4096 may 30 04:37 scripts_20250530_043704
+drwxr-xr-x  2 saze saze 4096 may 30 04:53 scripts_20250530_045349
+drwxr-xr-x  3 saze saze 4096 may 30 05:03 scripts_20250530_050329
+drwxr-xr-x  2 saze saze 4096 may 30 05:03 scripts_20250530_050338
+drwxr-xr-x  2 saze saze 4096 may 30 05:03 scripts_20250530_050350
+drwxr-xr-x  2 saze saze 4096 may 30 05:03 scripts_20250530_050351
+drwxr-xr-x  2 saze saze 4096 may 30 05:03 scripts_20250530_050359
+drwxr-xr-x  3 saze saze 4096 may 30 05:04 scripts_20250530_050416
+drwxr-xr-x  3 saze saze 4096 may 30 05:13 scripts_20250530_051324
+drwxr-xr-x  3 saze saze 4096 may 30 05:15 scripts_20250530_051523
+drwxr-xr-x  2 saze saze 4096 may 30 05:15 scripts_20250530_051524
+
+data:
+total 32
+drwxr-xr-x  8 saze saze 4096 may 29 20:12 .
+drwxr-xr-x 15 saze saze 4096 may 30 05:30 ..
+drwxr-xr-x  2 saze saze 4096 may 30 05:04 animatediff
+drwxr-xr-x  2 saze saze 4096 may 30 05:04 codellama
+drwxr-xr-x  2 saze saze 4096 may 30 05:04 memgpt
+drwxr-xr-x  2 saze saze 4096 may 30 05:04 stableaudio
+drwxr-xr-x  2 saze saze 4096 may 30 05:04 stable-diffusion
+drwxr-xr-x  2 saze saze 4096 may 30 05:04 xtts-es
+
+docker:
+total 16
+drwxr-xr-x  2 saze saze 4096 may 30 01:10 .
+drwxr-xr-x 15 saze saze 4096 may 30 05:30 ..
+-rw-r--r--  1 saze saze  230 may 29 20:05 Dockerfile.backend
+-rw-r--r--  1 saze saze  255 may 29 20:05 Dockerfile.frontend
+
+models:
+total 40
+drwxr-xr-x 10 saze saze 4096 may 30 00:39 .
+drwxr-xr-x 15 saze saze 4096 may 30 05:30 ..
+drwxr-xr-x  2 saze saze 4096 may 30 05:04 animatediff
+drwxr-xr-x  2 saze saze 4096 may 30 05:04 codellama
+drwxr-xr-x  2 saze saze 4096 may 29 21:20 comfyui
+drwxr-xr-x  2 saze saze 4096 may 30 05:04 memgpt
+drwxr-xr-x  2 saze saze 4096 may 29 21:20 musicgen
+drwxr-xr-x  2 saze saze 4096 may 30 05:04 stableaudio
+drwxr-xr-x  2 saze saze 4096 may 30 05:04 stable-diffusion
+drwxr-xr-x  2 saze saze 4096 may 30 05:04 xtts-es
+
+scripts:
+total 164
+drwxr-xr-x  2 saze saze 4096 may 30 03:03 .
+drwxr-xr-x 15 saze saze 4096 may 30 05:30 ..
+-rwxr-xr-x  1 saze saze  318 may 29 20:05 base_entrypoint.sh
+-rwxr-xr-x  1 saze saze 1779 may 29 23:39 check_dockerfile.py
+-rwxr-xr-x  1 saze saze 1596 may 29 20:05 check_model_versions.sh
+-rwxr-xr-x  1 saze saze  921 may 30 00:40 check_permisos.sh
+-rwxr-xr-x  1 saze saze  696 may 29 20:05 clean_empty_flags.sh
+-rwxr-xr-x  1 saze saze 1741 may 30 02:54 clean_requirements.py
+-rwxr-xr-x  1 saze saze 3777 may 29 20:05 diag_anu89.sh
+-rwxr-xr-x  1 saze saze 2572 may 30 00:24 diag_requirements_full.py
+-rwxr-xr-x  1 saze saze 1860 may 29 23:45 diag_requirements.py
+-rwxr-xr-x  1 saze saze  865 may 29 20:05 docker_clean_all.sh
+-rwxr-xr-x  1 saze saze 3729 may 29 20:05 download_modelos.sh
+-rwxr-xr-x  1 saze saze 2604 may 30 05:18 download_models.sh
+-rwxr-xr-x  1 saze saze 1200 may 30 01:40 enlazar_modelos.sh
+-rwxr-xr-x  1 saze saze  300 may 30 05:15 fix_audit.sh
+-rwxr-xr-x  1 saze saze 1370 may 29 22:38 fix_dockerfiles.py
+-rwxr-xr-x  1 saze saze  742 may 30 00:45 fix_permisos.sh
+-rwxr-xr-x  1 saze saze  810 may 29 23:57 fix_requirements_fastapi.py
+-rwxr-xr-x  1 saze saze   88 may 29 20:05 fix_vite.sh
+-rwxr-xr-x  1 saze saze 1281 may 29 23:08 generate_app_py.py
+-rwxr-xr-x  1 saze saze 1612 may 29 21:40 generate_service_ia.py
+-rwxr-xr-x  1 saze saze 1939 may 29 21:10 link_all.sh
+-rwxr-xr-x  1 saze saze 8407 may 29 20:12 main_controller2.py
+-rwxr-xr-x  1 saze saze 8469 may 29 21:25 main_controller.py
+-rwxr-xr-x  1 saze saze 2284 may 29 20:05 prepare_structure.sh
+-rwxr-xr-x  1 saze saze 5091 may 29 20:05 prepare_structure_UNIFICADO.sh
+-rwxr-xr-x  1 saze saze 2078 may 30 00:31 reorganizar_estructura.sh
+-rw-r--r--  1 saze saze 3424 may 30 02:51 requirements_report.md
+-rwxr-xr-x  1 saze saze 1233 may 29 20:05 restore-downloadmodels.sh
+-rwxr-xr-x  1 saze saze 1626 may 30 00:37 revertir_reorganizacion.sh
+-rwxr-xr-x  1 saze saze  260 may 30 00:54 snapshot_estructura.sh
+-rwxr-xr-x  1 saze saze  728 may 30 00:51 verificar_ritual.sh
+-rwxr-xr-x  1 saze saze  440 may 30 03:00 watch_all_requirements.sh
+-rwxr-xr-x  1 saze saze 2485 may 30 03:03 watch_requirements.py
+-rwxr-xr-x  1 saze saze  401 may 30 02:58 watch_requirements.sh
+
+services:
+total 88
+drwxr-xr-x 22 saze saze 4096 may 30 05:04 .
+drwxr-xr-x 15 saze saze 4096 may 30 05:30 ..
+lrwxrwxrwx  1 saze saze   29 may 30 00:59 animatediff -> /home/saze/Anuset/animatediff
+drwxr-xr-x  3 saze saze 4096 may 30 00:11 audio
+drwxr-xr-x  4 saze saze 4096 may 30 01:10 backend
+drwxr-xr-x  3 saze saze 4096 may 30 05:28 codellama
+drwxr-xr-x  3 saze saze 4096 may 30 00:11 codigo
+drwxr-xr-x  3 saze saze 4096 may 30 05:28 comfyui
+drwxr-xr-x  3 saze saze 4096 may 30 00:11 estilo
+drwxr-xr-x  8 saze saze 4096 may 30 03:33 frontend
+drwxr-xr-x  3 saze saze 4096 may 30 00:11 imagen
+drwxr-xr-x  3 saze saze 4096 may 30 00:11 interaccion
+drwxr-xr-x  2 saze saze 4096 may 30 01:10 mem0
+drwxr-xr-x  3 saze saze 4096 may 30 01:10 memgpt
+drwxr-xr-x  3 saze saze 4096 may 30 00:11 memoria
+drwxr-xr-x  3 saze saze 4096 may 30 00:11 musica
+drwxr-xr-x  3 saze saze 4096 may 30 05:28 musicgen
+drwxr-xr-x  2 saze saze 4096 may 30 01:10 openmemory
+drwxr-xr-x  3 saze saze 4096 may 30 01:10 stableaudio
+drwxr-xr-x  3 saze saze 4096 may 30 01:10 stable-diffusion
+drwxr-xr-x  3 saze saze 4096 may 30 00:11 video
+drwxr-xr-x  3 saze saze 4096 may 30 00:11 voz
+drwxr-xr-x  3 saze saze 4096 may 30 05:28 xtts-es
+
+tmp:
+total 20
+drwxr-xr-x  2 saze saze 4096 may 30 05:04 .
+drwxr-xr-x 15 saze saze 4096 may 30 05:30 ..
+-rwxr-xr-x  1 saze saze    0 may 29 20:05 CACHED
+-rwxr-xr-x  1 saze saze    0 may 29 20:05 CANCELED
+-rwxr-xr-x  1 saze saze    0 may 29 20:05 transferring
+-rw-r--r--  1 saze saze 9665 may 29 23:31 tree
+-rwxr-xr-x  1 saze saze    0 may 29 20:05 writing
+
+tor:
+total 12
+drwxr-xr-x  2 saze saze 4096 may 30 01:10 .
+drwxr-xr-x 15 saze saze 4096 may 30 05:30 ..
+-rw-r--r--  1 saze saze  193 may 29 20:05 torrc
+
+volumes:
+total 28
+drwxr-xr-x  7 saze saze 4096 may 30 02:20 .
+drwxr-xr-x 15 saze saze 4096 may 30 05:30 ..
+drwxr-xr-x  2 saze saze 4096 may 30 02:20 cache
+drwxr-xr-x  2 saze saze 4096 may 30 02:20 logs
+drwxr-xr-x  2 saze saze 4096 may 30 02:20 models
+drwxr-xr-x  2 saze saze 4096 may 30 02:20 outputs
+drwxr-xr-x  2 saze saze 4096 may 30 02:20 tmp

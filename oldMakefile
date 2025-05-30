@@ -1,0 +1,110 @@
+# Makefile — Base limpio de Anuset 🌌
+# Solo define algunas reglas especiales y delega todo a Makefile.extra
+
+# Incluir Makefile.extra
+include Makefile.extra
+
+# Override para hacer backup antes de detener
+down:
+	@echo "📦 Backup previo a apagar contenedores..."
+	@$(MAKE) backup
+	@echo "🔻 Apagando contenedores..."
+	@$(MAKE) _down
+
+restart:
+	@echo "📦 Backup previo a reiniciar..."
+	@$(MAKE) backup
+	@echo "🔁 Reiniciando servicios..."
+	@$(MAKE) _restart
+
+ritual:
+	@echo "📦 Backup previo al ritual..."
+	@$(MAKE) backup
+	@echo "🪄 Ejecutando ritual completo..."
+	@$(MAKE) _ritual
+# 🔧 Herramientas y mantenimiento
+fix-audit: ## Corrige resultados de auditoría en scripts y configuraciones
+	@bash scripts/fix_audit.sh
+
+fix-dockerfiles: ## Revisa y repara Dockerfiles (rutas, EXPOSE, permisos)
+	@python3 scripts/fix_dockerfiles.py
+
+fix-fastapi-reqs: ## Arregla requirements.txt de servicios FastAPI
+	@python3 scripts/fix_requirements_fastapi.py
+
+fix-vite: ## Arregla configuración Vite (React frontend)
+	@bash scripts/fix_vite.sh
+
+check-model-versions: ## Compara y lista versiones de modelos locales
+	@bash scripts/check_model_versions.sh
+
+# 📦 Modelos e IA
+download-modelos: ## Descarga modelos necesarios automáticamente
+	@bash scripts/download_models.sh
+
+enlazar-modelos: ## Enlaza modelos en carpetas simbólicas
+	@bash scripts/enlazar_modelos.sh
+
+watch-requirements: ## Observa cambios en requirements y regenera
+	@bash scripts/watch_requirements.sh
+
+watch-all: ## Observa TODOS los services para cambios en requirements
+	@bash scripts/watch_all_requirements.sh
+
+# 🧽 Limpieza
+clean-flags: ## Limpia banderas vacías o sobrantes
+	@bash scripts/clean_empty_flags.sh
+
+clean-requirements: ## Elimina todos los requirements generados
+	@bash scripts/clean_requirements.py
+
+docker-clean-all: ## Limpia TODOS los contenedores, redes y volúmenes
+	@bash scripts/docker_clean_all.sh
+
+# 📋 Estructura
+prepare-structure: ## Reorganiza carpetas base para estructura estándar
+	@bash scripts/prepare_structure.sh
+
+prepare-unificado: ## Prepara la estructura UNIFICADA completa
+	@bash scripts/prepare_structure_UNIFICADO.sh
+
+reorganizar: ## Aplica reorganización total
+	@bash scripts/reorganizar_estructura.sh
+
+revertir-reorganizacion: ## Revierte una reorganización anterior
+	@bash scripts/revertir_reorganizacion.sh
+
+snapshot-estructura: ## Toma snapshot de carpetas actual
+	@bash scripts/snapshot_estructura.sh
+
+# 🔍 Diagnóstico extendido
+diag-anu: ## Diagnóstico principal de Anuset-FINAL
+	@bash scripts/diag_anu89.sh
+
+diag-reqs: ## Verifica si faltan paquetes en cada servicio
+	@python3 scripts/diag_requirements.py
+
+diag-reqs-full: ## Versión completa con revisión por servicio
+	@python3 scripts/diag_requirements_full.py
+
+# 🧰 Utilidades varias
+verificar-ritual: ## Verifica integridad del ritual y configuraciones
+	@bash scripts/verificar_ritual.sh
+
+generate-apps: ## Genera automáticamente los app.py por servicio IA
+	@bash scripts/generate_app_py.py
+
+generate-services: ## Genera todos los servicios IA desde plantillas
+	@bash scripts/generate_service_ia.py
+
+main-controller: ## Ejecuta el controlador de servicios (main)
+	@python3 scripts/main_controller.py
+
+main-controller2: ## Alternativa avanzada del controlador
+	@python3 scripts/main_controller2.py
+
+link-all: ## Enlaza todo simbólicamente
+	@bash scripts/link_all.sh
+
+	@echo ""
+	@echo "🧪 Usa scripts con: make <comando> — ver todos arriba en sección scripts/"

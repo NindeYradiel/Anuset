@@ -1,0 +1,48 @@
+services
+├── animatediff -> /home/saze/Anuset/animatediff
+├── audio
+│   └── __pycache__
+├── backend
+│   ├── mem0
+│   └── routes
+├── codellama
+│   └── models
+├── codigo
+│   └── __pycache__
+├── comfyui
+│   └── models
+├── estilo
+│   └── __pycache__
+├── frontend
+│   ├── assets
+│   ├── dist
+│   ├── node_modules
+│   ├── public
+│   ├── src
+│   └── styles
+├── imagen
+│   └── __pycache__
+├── interaccion
+│   └── __pycache__
+├── mem0
+├── memgpt
+│   └── models
+├── memoria
+│   └── __pycache__
+├── musica
+│   └── __pycache__
+├── musicgen
+│   └── models
+├── openmemory
+├── stableaudio
+│   └── models
+├── stable-diffusion
+│   └── models
+├── video
+│   └── __pycache__
+├── voz
+│   └── __pycache__
+└── xtts-es
+    └── models
+
+46 directories

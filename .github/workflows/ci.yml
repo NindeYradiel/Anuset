@@ -1,0 +1,56 @@
+name: Anuset CI
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  anuset-check:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./  # raíz del repo
+
+    steps:
+    - name: 📥 Checkout repo
+      uses: actions/checkout@v3
+
+    - name: 🐍 Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: 3.11
+
+    - name: 🔧 Set up Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: 18
+
+    - name: 🐳 Install Docker Compose
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y docker-compose
+
+    - name: 📦 Install Python deps
+      run: |
+        pip install -r requirements.txt || true
+
+    - name: 📁 Estructura y Makefile
+      run: make check-ci
+
+    - name: 🧪 Diagnóstico completo
+      run: make diag || true
+
+    - name: 🧱 Build backend (FastAPI)
+      run: docker build -t backend ./services/backend/
+
+    - name: ⚛️ Build frontend (React)
+      run: docker build -t frontend ./frontend/
+
+    - name: 🧠 Test servicios IA
+      run: |
+        make test-services || echo "Algunos servicios IA podrían no estar preparados aún"
+
+    - name: ✅ CI finalizado
+      run: echo "✔️ CI Anuset completado"

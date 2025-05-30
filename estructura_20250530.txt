@@ -1,0 +1,1261 @@
+.
+├── animatediff
+│   ├── app.py
+│   ├── Dockerfile
+│   ├── download_models.sh
+│   ├── entrypoint.sh
+│   ├── models
+│   │   └── logs
+│   └── requirements.txt
+├── anuset_services.zip
+├── anu_visual
+│   ├── AnuuAwakening.tsx
+│   ├── AnuuCanvas.tsx
+│   └── AnuuIcon.tsx
+├── arbol.txt
+├── archives
+│   └── services.zip
+├── arranque_verificacion.py
+├── backups
+│   ├── 2025-05-30-0401
+│   │   ├── backups
+│   │   ├── data
+│   │   ├── frontend
+│   │   ├── package.json
+│   │   └── package-lock.json
+│   ├── scripts_20250530_043704
+│   │   ├── base_entrypoint.sh
+│   │   ├── check_dockerfile.py
+│   │   ├── check_model_versions.sh
+│   │   ├── check_permisos.sh
+│   │   ├── clean_empty_flags.sh
+│   │   ├── clean_requirements.py
+│   │   ├── diag_anu89.sh
+│   │   ├── diag_requirements_full.py
+│   │   ├── diag_requirements.py
+│   │   ├── docker_clean_all.sh
+│   │   ├── download_modelos.sh
+│   │   ├── download_models.sh
+│   │   ├── enlazar_modelos.sh
+│   │   ├── fix_audit.sh
+│   │   ├── fix_dockerfiles.py
+│   │   ├── fix_permisos.sh
+│   │   ├── fix_requirements_fastapi.py
+│   │   ├── fix_vite.sh
+│   │   ├── generate_app_py.py
+│   │   ├── generate_service_ia.py
+│   │   ├── link_all.sh
+│   │   ├── main_controller2.py
+│   │   ├── main_controller.py
+│   │   ├── prepare_structure.sh
+│   │   ├── prepare_structure_UNIFICADO.sh
+│   │   ├── reorganizar_estructura.sh
+│   │   ├── requirements_report.md
+│   │   ├── restore-downloadmodels.sh
+│   │   ├── revertir_reorganizacion.sh
+│   │   ├── snapshot_estructura.sh
+│   │   ├── verificar_ritual.sh
+│   │   ├── watch_all_requirements.sh
+│   │   ├── watch_requirements.py
+│   │   └── watch_requirements.sh
+│   ├── scripts_20250530_045349
+│   │   ├── base_entrypoint.sh
+│   │   ├── check_dockerfile.py
+│   │   ├── check_model_versions.sh
+│   │   ├── check_permisos.sh
+│   │   ├── clean_empty_flags.sh
+│   │   ├── clean_requirements.py
+│   │   ├── diag_anu89.sh
+│   │   ├── diag_requirements_full.py
+│   │   ├── diag_requirements.py
+│   │   ├── docker_clean_all.sh
+│   │   ├── download_modelos.sh
+│   │   ├── download_models.sh
+│   │   ├── enlazar_modelos.sh
+│   │   ├── fix_audit.sh
+│   │   ├── fix_dockerfiles.py
+│   │   ├── fix_permisos.sh
+│   │   ├── fix_requirements_fastapi.py
+│   │   ├── fix_vite.sh
+│   │   ├── generate_app_py.py
+│   │   ├── generate_service_ia.py
+│   │   ├── link_all.sh
+│   │   ├── main_controller2.py
+│   │   ├── main_controller.py
+│   │   ├── prepare_structure.sh
+│   │   ├── prepare_structure_UNIFICADO.sh
+│   │   ├── reorganizar_estructura.sh
+│   │   ├── requirements_report.md
+│   │   ├── restore-downloadmodels.sh
+│   │   ├── revertir_reorganizacion.sh
+│   │   ├── snapshot_estructura.sh
+│   │   ├── verificar_ritual.sh
+│   │   ├── watch_all_requirements.sh
+│   │   ├── watch_requirements.py
+│   │   └── watch_requirements.sh
+│   ├── scripts_20250530_050329
+│   │   ├── base_entrypoint.sh
+│   │   ├── check_dockerfile.py
+│   │   ├── check_model_versions.sh
+│   │   ├── check_permisos.sh
+│   │   ├── clean_empty_flags.sh
+│   │   ├── clean_requirements.py
+│   │   ├── diag_anu89.sh
+│   │   ├── diag_requirements_full.py
+│   │   ├── diag_requirements.py
+│   │   ├── docker_clean_all.sh
+│   │   ├── download_modelos.sh
+│   │   ├── download_models.sh
+│   │   ├── enlazar_modelos.sh
+│   │   ├── fix_audit.sh
+│   │   ├── fix_dockerfiles.py
+│   │   ├── fix_permisos.sh
+│   │   ├── fix_requirements_fastapi.py
+│   │   ├── fix_vite.sh
+│   │   ├── generate_app_py.py
+│   │   ├── generate_service_ia.py
+│   │   ├── link_all.sh
+│   │   ├── main_controller2.py
+│   │   ├── main_controller.py
+│   │   ├── prepare_structure.sh
+│   │   ├── prepare_structure_UNIFICADO.sh
+│   │   ├── reorganizar_estructura.sh
+│   │   ├── requirements_report.md
+│   │   ├── restore-downloadmodels.sh
+│   │   ├── revertir_reorganizacion.sh
+│   │   ├── scripts
+│   │   ├── snapshot_estructura.sh
+│   │   ├── verificar_ritual.sh
+│   │   ├── watch_all_requirements.sh
+│   │   ├── watch_requirements.py
+│   │   └── watch_requirements.sh
+│   ├── scripts_20250530_050338
+│   │   ├── base_entrypoint.sh
+│   │   ├── check_dockerfile.py
+│   │   ├── check_model_versions.sh
+│   │   ├── check_permisos.sh
+│   │   ├── clean_empty_flags.sh
+│   │   ├── clean_requirements.py
+│   │   ├── diag_anu89.sh
+│   │   ├── diag_requirements_full.py
+│   │   ├── diag_requirements.py
+│   │   ├── docker_clean_all.sh
+│   │   ├── download_modelos.sh
+│   │   ├── download_models.sh
+│   │   ├── enlazar_modelos.sh
+│   │   ├── fix_audit.sh
+│   │   ├── fix_dockerfiles.py
+│   │   ├── fix_permisos.sh
+│   │   ├── fix_requirements_fastapi.py
+│   │   ├── fix_vite.sh
+│   │   ├── generate_app_py.py
+│   │   ├── generate_service_ia.py
+│   │   ├── link_all.sh
+│   │   ├── main_controller2.py
+│   │   ├── main_controller.py
+│   │   ├── prepare_structure.sh
+│   │   ├── prepare_structure_UNIFICADO.sh
+│   │   ├── reorganizar_estructura.sh
+│   │   ├── requirements_report.md
+│   │   ├── restore-downloadmodels.sh
+│   │   ├── revertir_reorganizacion.sh
+│   │   ├── snapshot_estructura.sh
+│   │   ├── verificar_ritual.sh
+│   │   ├── watch_all_requirements.sh
+│   │   ├── watch_requirements.py
+│   │   └── watch_requirements.sh
+│   ├── scripts_20250530_050350
+│   │   ├── base_entrypoint.sh
+│   │   ├── check_dockerfile.py
+│   │   ├── check_model_versions.sh
+│   │   ├── check_permisos.sh
+│   │   ├── clean_empty_flags.sh
+│   │   ├── clean_requirements.py
+│   │   ├── diag_anu89.sh
+│   │   ├── diag_requirements_full.py
+│   │   ├── diag_requirements.py
+│   │   ├── docker_clean_all.sh
+│   │   ├── download_modelos.sh
+│   │   ├── download_models.sh
+│   │   ├── enlazar_modelos.sh
+│   │   ├── fix_audit.sh
+│   │   ├── fix_dockerfiles.py
+│   │   ├── fix_permisos.sh
+│   │   ├── fix_requirements_fastapi.py
+│   │   ├── fix_vite.sh
+│   │   ├── generate_app_py.py
+│   │   ├── generate_service_ia.py
+│   │   ├── link_all.sh
+│   │   ├── main_controller2.py
+│   │   ├── main_controller.py
+│   │   ├── prepare_structure.sh
+│   │   ├── prepare_structure_UNIFICADO.sh
+│   │   ├── reorganizar_estructura.sh
+│   │   ├── requirements_report.md
+│   │   ├── restore-downloadmodels.sh
+│   │   ├── revertir_reorganizacion.sh
+│   │   ├── snapshot_estructura.sh
+│   │   ├── verificar_ritual.sh
+│   │   ├── watch_all_requirements.sh
+│   │   ├── watch_requirements.py
+│   │   └── watch_requirements.sh
+│   ├── scripts_20250530_050351
+│   │   ├── base_entrypoint.sh
+│   │   ├── check_dockerfile.py
+│   │   ├── check_model_versions.sh
+│   │   ├── check_permisos.sh
+│   │   ├── clean_empty_flags.sh
+│   │   ├── clean_requirements.py
+│   │   ├── diag_anu89.sh
+│   │   ├── diag_requirements_full.py
+│   │   ├── diag_requirements.py
+│   │   ├── docker_clean_all.sh
+│   │   ├── download_modelos.sh
+│   │   ├── download_models.sh
+│   │   ├── enlazar_modelos.sh
+│   │   ├── fix_audit.sh
+│   │   ├── fix_dockerfiles.py
+│   │   ├── fix_permisos.sh
+│   │   ├── fix_requirements_fastapi.py
+│   │   ├── fix_vite.sh
+│   │   ├── generate_app_py.py
+│   │   ├── generate_service_ia.py
+│   │   ├── link_all.sh
+│   │   ├── main_controller2.py
+│   │   ├── main_controller.py
+│   │   ├── prepare_structure.sh
+│   │   ├── prepare_structure_UNIFICADO.sh
+│   │   ├── reorganizar_estructura.sh
+│   │   ├── requirements_report.md
+│   │   ├── restore-downloadmodels.sh
+│   │   ├── revertir_reorganizacion.sh
+│   │   ├── snapshot_estructura.sh
+│   │   ├── verificar_ritual.sh
+│   │   ├── watch_all_requirements.sh
+│   │   ├── watch_requirements.py
+│   │   └── watch_requirements.sh
+│   ├── scripts_20250530_050359
+│   │   ├── base_entrypoint.sh
+│   │   ├── check_dockerfile.py
+│   │   ├── check_model_versions.sh
+│   │   ├── check_permisos.sh
+│   │   ├── clean_empty_flags.sh
+│   │   ├── clean_requirements.py
+│   │   ├── diag_anu89.sh
+│   │   ├── diag_requirements_full.py
+│   │   ├── diag_requirements.py
+│   │   ├── docker_clean_all.sh
+│   │   ├── download_modelos.sh
+│   │   ├── download_models.sh
+│   │   ├── enlazar_modelos.sh
+│   │   ├── fix_audit.sh
+│   │   ├── fix_dockerfiles.py
+│   │   ├── fix_permisos.sh
+│   │   ├── fix_requirements_fastapi.py
+│   │   ├── fix_vite.sh
+│   │   ├── generate_app_py.py
+│   │   ├── generate_service_ia.py
+│   │   ├── link_all.sh
+│   │   ├── main_controller2.py
+│   │   ├── main_controller.py
+│   │   ├── prepare_structure.sh
+│   │   ├── prepare_structure_UNIFICADO.sh
+│   │   ├── reorganizar_estructura.sh
+│   │   ├── requirements_report.md
+│   │   ├── restore-downloadmodels.sh
+│   │   ├── revertir_reorganizacion.sh
+│   │   ├── snapshot_estructura.sh
+│   │   ├── verificar_ritual.sh
+│   │   ├── watch_all_requirements.sh
+│   │   ├── watch_requirements.py
+│   │   └── watch_requirements.sh
+│   ├── scripts_20250530_050416
+│   │   ├── base_entrypoint.sh
+│   │   ├── check_dockerfile.py
+│   │   ├── check_model_versions.sh
+│   │   ├── check_permisos.sh
+│   │   ├── clean_empty_flags.sh
+│   │   ├── clean_requirements.py
+│   │   ├── diag_anu89.sh
+│   │   ├── diag_requirements_full.py
+│   │   ├── diag_requirements.py
+│   │   ├── docker_clean_all.sh
+│   │   ├── download_modelos.sh
+│   │   ├── download_models.sh
+│   │   ├── enlazar_modelos.sh
+│   │   ├── fix_audit.sh
+│   │   ├── fix_dockerfiles.py
+│   │   ├── fix_permisos.sh
+│   │   ├── fix_requirements_fastapi.py
+│   │   ├── fix_vite.sh
+│   │   ├── generate_app_py.py
+│   │   ├── generate_service_ia.py
+│   │   ├── link_all.sh
+│   │   ├── main_controller2.py
+│   │   ├── main_controller.py
+│   │   ├── prepare_structure.sh
+│   │   ├── prepare_structure_UNIFICADO.sh
+│   │   ├── reorganizar_estructura.sh
+│   │   ├── requirements_report.md
+│   │   ├── restore-downloadmodels.sh
+│   │   ├── revertir_reorganizacion.sh
+│   │   ├── scripts
+│   │   ├── snapshot_estructura.sh
+│   │   ├── verificar_ritual.sh
+│   │   ├── watch_all_requirements.sh
+│   │   ├── watch_requirements.py
+│   │   └── watch_requirements.sh
+│   ├── scripts_20250530_051324
+│   │   ├── base_entrypoint.sh
+│   │   ├── check_dockerfile.py
+│   │   ├── check_model_versions.sh
+│   │   ├── check_permisos.sh
+│   │   ├── clean_empty_flags.sh
+│   │   ├── clean_requirements.py
+│   │   ├── diag_anu89.sh
+│   │   ├── diag_requirements_full.py
+│   │   ├── diag_requirements.py
+│   │   ├── docker_clean_all.sh
+│   │   ├── download_modelos.sh
+│   │   ├── download_models.sh
+│   │   ├── enlazar_modelos.sh
+│   │   ├── fix_audit.sh
+│   │   ├── fix_dockerfiles.py
+│   │   ├── fix_permisos.sh
+│   │   ├── fix_requirements_fastapi.py
+│   │   ├── fix_vite.sh
+│   │   ├── generate_app_py.py
+│   │   ├── generate_service_ia.py
+│   │   ├── link_all.sh
+│   │   ├── main_controller2.py
+│   │   ├── main_controller.py
+│   │   ├── prepare_structure.sh
+│   │   ├── prepare_structure_UNIFICADO.sh
+│   │   ├── reorganizar_estructura.sh
+│   │   ├── requirements_report.md
+│   │   ├── restore-downloadmodels.sh
+│   │   ├── revertir_reorganizacion.sh
+│   │   ├── scripts
+│   │   ├── snapshot_estructura.sh
+│   │   ├── verificar_ritual.sh
+│   │   ├── watch_all_requirements.sh
+│   │   ├── watch_requirements.py
+│   │   └── watch_requirements.sh
+│   ├── scripts_20250530_051523
+│   │   ├── base_entrypoint.sh
+│   │   ├── check_dockerfile.py
+│   │   ├── check_model_versions.sh
+│   │   ├── check_permisos.sh
+│   │   ├── clean_empty_flags.sh
+│   │   ├── clean_requirements.py
+│   │   ├── diag_anu89.sh
+│   │   ├── diag_requirements_full.py
+│   │   ├── diag_requirements.py
+│   │   ├── docker_clean_all.sh
+│   │   ├── download_modelos.sh
+│   │   ├── download_models.sh
+│   │   ├── enlazar_modelos.sh
+│   │   ├── fix_audit.sh
+│   │   ├── fix_dockerfiles.py
+│   │   ├── fix_permisos.sh
+│   │   ├── fix_requirements_fastapi.py
+│   │   ├── fix_vite.sh
+│   │   ├── generate_app_py.py
+│   │   ├── generate_service_ia.py
+│   │   ├── link_all.sh
+│   │   ├── main_controller2.py
+│   │   ├── main_controller.py
+│   │   ├── prepare_structure.sh
+│   │   ├── prepare_structure_UNIFICADO.sh
+│   │   ├── reorganizar_estructura.sh
+│   │   ├── requirements_report.md
+│   │   ├── restore-downloadmodels.sh
+│   │   ├── revertir_reorganizacion.sh
+│   │   ├── scripts
+│   │   ├── snapshot_estructura.sh
+│   │   ├── verificar_ritual.sh
+│   │   ├── watch_all_requirements.sh
+│   │   ├── watch_requirements.py
+│   │   └── watch_requirements.sh
+│   ├── scripts_20250530_051524
+│   │   ├── base_entrypoint.sh
+│   │   ├── check_dockerfile.py
+│   │   ├── check_model_versions.sh
+│   │   ├── check_permisos.sh
+│   │   ├── clean_empty_flags.sh
+│   │   ├── clean_requirements.py
+│   │   ├── diag_anu89.sh
+│   │   ├── diag_requirements_full.py
+│   │   ├── diag_requirements.py
+│   │   ├── docker_clean_all.sh
+│   │   ├── download_modelos.sh
+│   │   ├── download_models.sh
+│   │   ├── enlazar_modelos.sh
+│   │   ├── fix_audit.sh
+│   │   ├── fix_dockerfiles.py
+│   │   ├── fix_permisos.sh
+│   │   ├── fix_requirements_fastapi.py
+│   │   ├── fix_vite.sh
+│   │   ├── generate_app_py.py
+│   │   ├── generate_service_ia.py
+│   │   ├── link_all.sh
+│   │   ├── main_controller2.py
+│   │   ├── main_controller.py
+│   │   ├── prepare_structure.sh
+│   │   ├── prepare_structure_UNIFICADO.sh
+│   │   ├── reorganizar_estructura.sh
+│   │   ├── requirements_report.md
+│   │   ├── restore-downloadmodels.sh
+│   │   ├── revertir_reorganizacion.sh
+│   │   ├── snapshot_estructura.sh
+│   │   ├── verificar_ritual.sh
+│   │   ├── watch_all_requirements.sh
+│   │   ├── watch_requirements.py
+│   │   └── watch_requirements.sh
+│   ├── scripts_20250530_054125
+│   │   ├── base_entrypoint.sh
+│   │   ├── check_dockerfile.py
+│   │   ├── check_model_versions.sh
+│   │   ├── check_permisos.sh
+│   │   ├── clean_empty_flags.sh
+│   │   ├── clean_requirements.py
+│   │   ├── diag_anu89.sh
+│   │   ├── diag_requirements_full.py
+│   │   ├── diag_requirements.py
+│   │   ├── docker_clean_all.sh
+│   │   ├── download_modelos.sh
+│   │   ├── download_models.sh
+│   │   ├── enlazar_modelos.sh
+│   │   ├── fix_audit.sh
+│   │   ├── fix_dockerfiles.py
+│   │   ├── fix_permisos.sh
+│   │   ├── fix_requirements_fastapi.py
+│   │   ├── fix_vite.sh
+│   │   ├── generate_app_py.py
+│   │   ├── generate_service_ia.py
+│   │   ├── link_all.sh
+│   │   ├── main_controller2.py
+│   │   ├── main_controller.py
+│   │   ├── prepare_structure.sh
+│   │   ├── prepare_structure_UNIFICADO.sh
+│   │   ├── reorganizar_estructura.sh
+│   │   ├── requirements_report.md
+│   │   ├── restore-downloadmodels.sh
+│   │   ├── revertir_reorganizacion.sh
+│   │   ├── snapshot_estructura.sh
+│   │   ├── test_all_services.sh
+│   │   ├── verificar_ritual.sh
+│   │   ├── watch_all_requirements.sh
+│   │   ├── watch_requirements.py
+│   │   └── watch_requirements.sh
+│   ├── scripts_20250530_054252
+│   │   ├── base_entrypoint.sh
+│   │   ├── check_dockerfile.py
+│   │   ├── check_model_versions.sh
+│   │   ├── check_permisos.sh
+│   │   ├── clean_empty_flags.sh
+│   │   ├── clean_requirements.py
+│   │   ├── diag_anu89.sh
+│   │   ├── diag_requirements_full.py
+│   │   ├── diag_requirements.py
+│   │   ├── docker_clean_all.sh
+│   │   ├── download_modelos.sh
+│   │   ├── download_models.sh
+│   │   ├── enlazar_modelos.sh
+│   │   ├── fix_audit.sh
+│   │   ├── fix_dockerfiles.py
+│   │   ├── fix_permisos.sh
+│   │   ├── fix_requirements_fastapi.py
+│   │   ├── fix_vite.sh
+│   │   ├── generate_app_py.py
+│   │   ├── generate_service_ia.py
+│   │   ├── link_all.sh
+│   │   ├── main_controller2.py
+│   │   ├── main_controller.py
+│   │   ├── prepare_structure.sh
+│   │   ├── prepare_structure_UNIFICADO.sh
+│   │   ├── reorganizar_estructura.sh
+│   │   ├── requirements_report.md
+│   │   ├── restore-downloadmodels.sh
+│   │   ├── revertir_reorganizacion.sh
+│   │   ├── snapshot_estructura.sh
+│   │   ├── test_all_services.sh
+│   │   ├── verificar_ritual.sh
+│   │   ├── watch_all_requirements.sh
+│   │   ├── watch_requirements.py
+│   │   └── watch_requirements.sh
+│   ├── scripts_20250530_060728
+│   │   ├── banner_anuu.txt
+│   │   ├── base_entrypoint.sh
+│   │   ├── check_dockerfile.py
+│   │   ├── check_model_versions.sh
+│   │   ├── check_permisos.sh
+│   │   ├── clean_empty_flags.sh
+│   │   ├── clean_requirements.py
+│   │   ├── diag_anu89.sh
+│   │   ├── diag_requirements_full.py
+│   │   ├── diag_requirements.py
+│   │   ├── docker_clean_all.sh
+│   │   ├── download_modelos.sh
+│   │   ├── download_models.sh
+│   │   ├── enlazar_modelos.sh
+│   │   ├── fix_audit.sh
+│   │   ├── fix_dockerfiles.py
+│   │   ├── fix_permisos.sh
+│   │   ├── fix_requirements_fastapi.py
+│   │   ├── fix_vite.sh
+│   │   ├── generate_app_py.py
+│   │   ├── generate_service_ia.py
+│   │   ├── link_all.sh
+│   │   ├── main_controller2.py
+│   │   ├── main_controller.py
+│   │   ├── prepare_structure.sh
+│   │   ├── prepare_structure_UNIFICADO.sh
+│   │   ├── reorganizar_estructura.sh
+│   │   ├── requirements_report.md
+│   │   ├── restore-downloadmodels.sh
+│   │   ├── revertir_reorganizacion.sh
+│   │   ├── scripts
+│   │   ├── snapshot_estructura.sh
+│   │   ├── test_all_services.sh
+│   │   ├── verificar_ritual.sh
+│   │   ├── watch_all_requirements.sh
+│   │   ├── watch_requirements.py
+│   │   └── watch_requirements.sh
+│   ├── scripts_20250530_061444
+│   │   ├── banner_anuu.txt
+│   │   ├── base_entrypoint.sh
+│   │   ├── check_dockerfile.py
+│   │   ├── check_model_versions.sh
+│   │   ├── check_permisos.sh
+│   │   ├── clean_empty_flags.sh
+│   │   ├── clean_requirements.py
+│   │   ├── diag_anu89.sh
+│   │   ├── diag_requirements_full.py
+│   │   ├── diag_requirements.py
+│   │   ├── docker_clean_all.sh
+│   │   ├── download_modelos.sh
+│   │   ├── download_models.sh
+│   │   ├── enlazar_modelos.sh
+│   │   ├── fix_audit.sh
+│   │   ├── fix_dockerfiles.py
+│   │   ├── fix_permisos.sh
+│   │   ├── fix_requirements_fastapi.py
+│   │   ├── fix_vite.sh
+│   │   ├── generate_app_py.py
+│   │   ├── generate_service_ia.py
+│   │   ├── link_all.sh
+│   │   ├── main_controller2.py
+│   │   ├── main_controller.py
+│   │   ├── prepare_structure.sh
+│   │   ├── prepare_structure_UNIFICADO.sh
+│   │   ├── reorganizar_estructura.sh
+│   │   ├── requirements_report.md
+│   │   ├── restore-downloadmodels.sh
+│   │   ├── revertir_reorganizacion.sh
+│   │   ├── scripts
+│   │   ├── snapshot_estructura.sh
+│   │   ├── test_all_services.sh
+│   │   ├── verificar_ritual.sh
+│   │   ├── watch_all_requirements.sh
+│   │   ├── watch_requirements.py
+│   │   └── watch_requirements.sh
+│   ├── scripts_20250530_062238
+│   │   ├── banner_anuu.txt
+│   │   ├── base_entrypoint.sh
+│   │   ├── check_dockerfile.py
+│   │   ├── check_model_versions.sh
+│   │   ├── check_permisos.sh
+│   │   ├── clean_empty_flags.sh
+│   │   ├── clean_requirements.py
+│   │   ├── diag_anu89.sh
+│   │   ├── diag_requirements_full.py
+│   │   ├── diag_requirements.py
+│   │   ├── docker_clean_all.sh
+│   │   ├── download_modelos.sh
+│   │   ├── download_models.sh
+│   │   ├── enlazar_modelos.sh
+│   │   ├── fix_audit.sh
+│   │   ├── fix_dockerfiles.py
+│   │   ├── fix_permisos.sh
+│   │   ├── fix_requirements_fastapi.py
+│   │   ├── fix_vite.sh
+│   │   ├── generate_app_py.py
+│   │   ├── generate_service_ia.py
+│   │   ├── link_all.sh
+│   │   ├── main_controller2.py
+│   │   ├── main_controller.py
+│   │   ├── prepare_structure.sh
+│   │   ├── prepare_structure_UNIFICADO.sh
+│   │   ├── reorganizar_estructura.sh
+│   │   ├── requirements_report.md
+│   │   ├── restore-downloadmodels.sh
+│   │   ├── revertir_reorganizacion.sh
+│   │   ├── scripts
+│   │   ├── snapshot_estructura.sh
+│   │   ├── test_all_services.sh
+│   │   ├── verificar_ritual.sh
+│   │   ├── watch_all_requirements.sh
+│   │   ├── watch_requirements.py
+│   │   └── watch_requirements.sh
+│   ├── scripts_20250530_064006
+│   │   ├── banner_anuu.txt
+│   │   ├── base_entrypoint.sh
+│   │   ├── check_dockerfile.py
+│   │   ├── check_model_versions.sh
+│   │   ├── check_permisos.sh
+│   │   ├── clean_empty_flags.sh
+│   │   ├── clean_requirements.py
+│   │   ├── diag_anu89.sh
+│   │   ├── diag_requirements_full.py
+│   │   ├── diag_requirements.py
+│   │   ├── docker_clean_all.sh
+│   │   ├── docker-compose.yml
+│   │   ├── download_modelos.sh
+│   │   ├── download_models.sh
+│   │   ├── enlazar_modelos.sh
+│   │   ├── fix_audit.sh
+│   │   ├── fix_dockerfiles.py
+│   │   ├── fix_permisos.sh
+│   │   ├── fix_requirements_fastapi.py
+│   │   ├── fix_vite.sh
+│   │   ├── generate_app_py.py
+│   │   ├── generate_docker_compose.py
+│   │   ├── generate_service_ia.py
+│   │   ├── link_all.sh
+│   │   ├── main_controller2.py
+│   │   ├── main_controller.py
+│   │   ├── prepare_structure.sh
+│   │   ├── prepare_structure_UNIFICADO.sh
+│   │   ├── reorganizar_estructura.sh
+│   │   ├── requirements_report.md
+│   │   ├── restore-downloadmodels.sh
+│   │   ├── revertir_reorganizacion.sh
+│   │   ├── snapshot_estructura.sh
+│   │   ├── test_all_services.sh
+│   │   ├── verificar_ritual.sh
+│   │   ├── watch_all_requirements.sh
+│   │   ├── watch_requirements.py
+│   │   └── watch_requirements.sh
+│   ├── scripts_20250530_064028
+│   │   ├── banner_anuu.txt
+│   │   ├── base_entrypoint.sh
+│   │   ├── check_dockerfile.py
+│   │   ├── check_model_versions.sh
+│   │   ├── check_permisos.sh
+│   │   ├── clean_empty_flags.sh
+│   │   ├── clean_requirements.py
+│   │   ├── diag_anu89.sh
+│   │   ├── diag_requirements_full.py
+│   │   ├── diag_requirements.py
+│   │   ├── docker_clean_all.sh
+│   │   ├── docker-compose.yml
+│   │   ├── download_modelos.sh
+│   │   ├── download_models.sh
+│   │   ├── enlazar_modelos.sh
+│   │   ├── fix_audit.sh
+│   │   ├── fix_dockerfiles.py
+│   │   ├── fix_permisos.sh
+│   │   ├── fix_requirements_fastapi.py
+│   │   ├── fix_vite.sh
+│   │   ├── generate_app_py.py
+│   │   ├── generate_docker_compose.py
+│   │   ├── generate_service_ia.py
+│   │   ├── link_all.sh
+│   │   ├── main_controller2.py
+│   │   ├── main_controller.py
+│   │   ├── prepare_structure.sh
+│   │   ├── prepare_structure_UNIFICADO.sh
+│   │   ├── reorganizar_estructura.sh
+│   │   ├── requirements_report.md
+│   │   ├── restore-downloadmodels.sh
+│   │   ├── revertir_reorganizacion.sh
+│   │   ├── snapshot_estructura.sh
+│   │   ├── test_all_services.sh
+│   │   ├── verificar_ritual.sh
+│   │   ├── watch_all_requirements.sh
+│   │   ├── watch_requirements.py
+│   │   └── watch_requirements.sh
+│   ├── scripts_20250530_064036
+│   │   ├── banner_anuu.txt
+│   │   ├── base_entrypoint.sh
+│   │   ├── check_dockerfile.py
+│   │   ├── check_model_versions.sh
+│   │   ├── check_permisos.sh
+│   │   ├── clean_empty_flags.sh
+│   │   ├── clean_requirements.py
+│   │   ├── diag_anu89.sh
+│   │   ├── diag_requirements_full.py
+│   │   ├── diag_requirements.py
+│   │   ├── docker_clean_all.sh
+│   │   ├── docker-compose.yml
+│   │   ├── download_modelos.sh
+│   │   ├── download_models.sh
+│   │   ├── enlazar_modelos.sh
+│   │   ├── fix_audit.sh
+│   │   ├── fix_dockerfiles.py
+│   │   ├── fix_permisos.sh
+│   │   ├── fix_requirements_fastapi.py
+│   │   ├── fix_vite.sh
+│   │   ├── generate_app_py.py
+│   │   ├── generate_docker_compose.py
+│   │   ├── generate_service_ia.py
+│   │   ├── link_all.sh
+│   │   ├── main_controller2.py
+│   │   ├── main_controller.py
+│   │   ├── prepare_structure.sh
+│   │   ├── prepare_structure_UNIFICADO.sh
+│   │   ├── reorganizar_estructura.sh
+│   │   ├── requirements_report.md
+│   │   ├── restore-downloadmodels.sh
+│   │   ├── revertir_reorganizacion.sh
+│   │   ├── snapshot_estructura.sh
+│   │   ├── test_all_services.sh
+│   │   ├── verificar_ritual.sh
+│   │   ├── watch_all_requirements.sh
+│   │   ├── watch_requirements.py
+│   │   └── watch_requirements.sh
+│   ├── scripts_20250530_064044
+│   │   ├── banner_anuu.txt
+│   │   ├── base_entrypoint.sh
+│   │   ├── check_dockerfile.py
+│   │   ├── check_model_versions.sh
+│   │   ├── check_permisos.sh
+│   │   ├── clean_empty_flags.sh
+│   │   ├── clean_requirements.py
+│   │   ├── diag_anu89.sh
+│   │   ├── diag_requirements_full.py
+│   │   ├── diag_requirements.py
+│   │   ├── docker_clean_all.sh
+│   │   ├── docker-compose.yml
+│   │   ├── download_modelos.sh
+│   │   ├── download_models.sh
+│   │   ├── enlazar_modelos.sh
+│   │   ├── fix_audit.sh
+│   │   ├── fix_dockerfiles.py
+│   │   ├── fix_permisos.sh
+│   │   ├── fix_requirements_fastapi.py
+│   │   ├── fix_vite.sh
+│   │   ├── generate_app_py.py
+│   │   ├── generate_docker_compose.py
+│   │   ├── generate_service_ia.py
+│   │   ├── link_all.sh
+│   │   ├── main_controller2.py
+│   │   ├── main_controller.py
+│   │   ├── prepare_structure.sh
+│   │   ├── prepare_structure_UNIFICADO.sh
+│   │   ├── reorganizar_estructura.sh
+│   │   ├── requirements_report.md
+│   │   ├── restore-downloadmodels.sh
+│   │   ├── revertir_reorganizacion.sh
+│   │   ├── snapshot_estructura.sh
+│   │   ├── test_all_services.sh
+│   │   ├── verificar_ritual.sh
+│   │   ├── watch_all_requirements.sh
+│   │   ├── watch_requirements.py
+│   │   └── watch_requirements.sh
+│   ├── scripts_20250530_064055
+│   │   ├── banner_anuu.txt
+│   │   ├── base_entrypoint.sh
+│   │   ├── check_dockerfile.py
+│   │   ├── check_model_versions.sh
+│   │   ├── check_permisos.sh
+│   │   ├── clean_empty_flags.sh
+│   │   ├── clean_requirements.py
+│   │   ├── diag_anu89.sh
+│   │   ├── diag_requirements_full.py
+│   │   ├── diag_requirements.py
+│   │   ├── docker_clean_all.sh
+│   │   ├── docker-compose.yml
+│   │   ├── download_modelos.sh
+│   │   ├── download_models.sh
+│   │   ├── enlazar_modelos.sh
+│   │   ├── fix_audit.sh
+│   │   ├── fix_dockerfiles.py
+│   │   ├── fix_permisos.sh
+│   │   ├── fix_requirements_fastapi.py
+│   │   ├── fix_vite.sh
+│   │   ├── generate_app_py.py
+│   │   ├── generate_docker_compose.py
+│   │   ├── generate_service_ia.py
+│   │   ├── link_all.sh
+│   │   ├── main_controller2.py
+│   │   ├── main_controller.py
+│   │   ├── prepare_structure.sh
+│   │   ├── prepare_structure_UNIFICADO.sh
+│   │   ├── reorganizar_estructura.sh
+│   │   ├── requirements_report.md
+│   │   ├── restore-downloadmodels.sh
+│   │   ├── revertir_reorganizacion.sh
+│   │   ├── snapshot_estructura.sh
+│   │   ├── test_all_services.sh
+│   │   ├── verificar_ritual.sh
+│   │   ├── watch_all_requirements.sh
+│   │   ├── watch_requirements.py
+│   │   └── watch_requirements.sh
+│   ├── scripts_20250530_135149
+│   │   ├── banner_anuu.txt
+│   │   ├── base_entrypoint.sh
+│   │   ├── check_dockerfile.py
+│   │   ├── check_model_versions.sh
+│   │   ├── check_permisos.sh
+│   │   ├── clean_empty_flags.sh
+│   │   ├── clean_requirements.py
+│   │   ├── diag_anu89.sh
+│   │   ├── diag_requirements_full.py
+│   │   ├── diag_requirements.py
+│   │   ├── docker_clean_all.sh
+│   │   ├── docker-compose.yml
+│   │   ├── download_modelos.sh
+│   │   ├── download_models.sh
+│   │   ├── enlazar_modelos.sh
+│   │   ├── fix_audit.sh
+│   │   ├── fix_dockerfiles.py
+│   │   ├── fix_permisos.sh
+│   │   ├── fix_requirements_fastapi.py
+│   │   ├── fix_vite.sh
+│   │   ├── generate_app_py.py
+│   │   ├── generate_docker_compose.py
+│   │   ├── generate_service_ia.py
+│   │   ├── link_all.sh
+│   │   ├── main_controller2.py
+│   │   ├── main_controller.py
+│   │   ├── prepare_structure.sh
+│   │   ├── prepare_structure_UNIFICADO.sh
+│   │   ├── reorganizar_estructura.sh
+│   │   ├── requirements_report.md
+│   │   ├── restore-downloadmodels.sh
+│   │   ├── revertir_reorganizacion.sh
+│   │   ├── snapshot_estructura.sh
+│   │   ├── test_all_services.sh
+│   │   ├── verificar_ritual.sh
+│   │   ├── watch_all_requirements.sh
+│   │   ├── watch_requirements.py
+│   │   └── watch_requirements.sh
+│   ├── scripts_20250530_141344
+│   │   ├── banner_anuu.txt
+│   │   ├── base_entrypoint.sh
+│   │   ├── check_dockerfile.py
+│   │   ├── check_model_versions.sh
+│   │   ├── check_permisos.sh
+│   │   ├── clean_empty_flags.sh
+│   │   ├── clean_requirements.py
+│   │   ├── diag_anu89.sh
+│   │   ├── diag_requirements_full.py
+│   │   ├── diag_requirements.py
+│   │   ├── docker_clean_all.sh
+│   │   ├── docker-compose.yml
+│   │   ├── download_modelos.sh
+│   │   ├── download_models.sh
+│   │   ├── enlazar_modelos.sh
+│   │   ├── fix_audit.sh
+│   │   ├── fix_dockerfiles.py
+│   │   ├── fix_permisos.sh
+│   │   ├── fix_requirements_fastapi.py
+│   │   ├── fix_vite.sh
+│   │   ├── generate_app_py.py
+│   │   ├── generate_docker_compose.py
+│   │   ├── generate_service_ia.py
+│   │   ├── link_all.sh
+│   │   ├── main_controller2.py
+│   │   ├── main_controller.py
+│   │   ├── prepare_structure.sh
+│   │   ├── prepare_structure_UNIFICADO.sh
+│   │   ├── reorganizar_estructura.sh
+│   │   ├── requirements_report.md
+│   │   ├── restore-downloadmodels.sh
+│   │   ├── revertir_reorganizacion.sh
+│   │   ├── snapshot_estructura.sh
+│   │   ├── test_all_services.sh
+│   │   ├── verificar_ritual.sh
+│   │   ├── watch_all_requirements.sh
+│   │   ├── watch_requirements.py
+│   │   └── watch_requirements.sh
+│   ├── scripts_20250530_141358
+│   │   ├── banner_anuu.txt
+│   │   ├── base_entrypoint.sh
+│   │   ├── check_dockerfile.py
+│   │   ├── check_model_versions.sh
+│   │   ├── check_permisos.sh
+│   │   ├── clean_empty_flags.sh
+│   │   ├── clean_requirements.py
+│   │   ├── diag_anu89.sh
+│   │   ├── diag_requirements_full.py
+│   │   ├── diag_requirements.py
+│   │   ├── docker_clean_all.sh
+│   │   ├── docker-compose.yml
+│   │   ├── download_modelos.sh
+│   │   ├── download_models.sh
+│   │   ├── enlazar_modelos.sh
+│   │   ├── fix_audit.sh
+│   │   ├── fix_dockerfiles.py
+│   │   ├── fix_permisos.sh
+│   │   ├── fix_requirements_fastapi.py
+│   │   ├── fix_vite.sh
+│   │   ├── generate_app_py.py
+│   │   ├── generate_docker_compose.py
+│   │   ├── generate_service_ia.py
+│   │   ├── link_all.sh
+│   │   ├── main_controller2.py
+│   │   ├── main_controller.py
+│   │   ├── prepare_structure.sh
+│   │   ├── prepare_structure_UNIFICADO.sh
+│   │   ├── reorganizar_estructura.sh
+│   │   ├── requirements_report.md
+│   │   ├── restore-downloadmodels.sh
+│   │   ├── revertir_reorganizacion.sh
+│   │   ├── snapshot_estructura.sh
+│   │   ├── test_all_services.sh
+│   │   ├── verificar_ritual.sh
+│   │   ├── watch_all_requirements.sh
+│   │   ├── watch_requirements.py
+│   │   └── watch_requirements.sh
+│   ├── scripts_20250530_141635
+│   │   ├── banner_anuu.txt
+│   │   ├── base_entrypoint.sh
+│   │   ├── check_dockerfile.py
+│   │   ├── check_model_versions.sh
+│   │   ├── check_permisos.sh
+│   │   ├── clean_empty_flags.sh
+│   │   ├── clean_requirements.py
+│   │   ├── diag_anu89.sh
+│   │   ├── diag_requirements_full.py
+│   │   ├── diag_requirements.py
+│   │   ├── docker_clean_all.sh
+│   │   ├── docker-compose.yml
+│   │   ├── download_modelos.sh
+│   │   ├── download_models.sh
+│   │   ├── enlazar_modelos.sh
+│   │   ├── fix_audit.sh
+│   │   ├── fix_dockerfiles.py
+│   │   ├── fix_permisos.sh
+│   │   ├── fix_requirements_fastapi.py
+│   │   ├── fix_vite.sh
+│   │   ├── generate_app_py.py
+│   │   ├── generate_docker_compose.py
+│   │   ├── generate_service_ia.py
+│   │   ├── link_all.sh
+│   │   ├── main_controller2.py
+│   │   ├── main_controller.py
+│   │   ├── prepare_structure.sh
+│   │   ├── prepare_structure_UNIFICADO.sh
+│   │   ├── reorganizar_estructura.sh
+│   │   ├── requirements_report.md
+│   │   ├── restore-downloadmodels.sh
+│   │   ├── revertir_reorganizacion.sh
+│   │   ├── snapshot_estructura.sh
+│   │   ├── test_all_services.sh
+│   │   ├── verificar_ritual.sh
+│   │   ├── watch_all_requirements.sh
+│   │   ├── watch_requirements.py
+│   │   └── watch_requirements.sh
+│   └── scripts_20250530_141857
+│       ├── banner_anuu.txt
+│       ├── base_entrypoint.sh
+│       ├── check_dockerfile.py
+│       ├── check_model_versions.sh
+│       ├── check_permisos.sh
+│       ├── clean_empty_flags.sh
+│       ├── clean_requirements.py
+│       ├── diag_anu89.sh
+│       ├── diag_requirements_full.py
+│       ├── diag_requirements.py
+│       ├── docker_clean_all.sh
+│       ├── docker-compose.yml
+│       ├── download_modelos.sh
+│       ├── download_models.sh
+│       ├── enlazar_modelos.sh
+│       ├── fix_audit.sh
+│       ├── fix_dockerfiles.py
+│       ├── fix_permisos.sh
+│       ├── fix_requirements_fastapi.py
+│       ├── fix_vite.sh
+│       ├── generate_app_py.py
+│       ├── generate_docker_compose.py
+│       ├── generate_service_ia.py
+│       ├── link_all.sh
+│       ├── main_controller2.py
+│       ├── main_controller.py
+│       ├── prepare_structure.sh
+│       ├── prepare_structure_UNIFICADO.sh
+│       ├── reorganizar_estructura.sh
+│       ├── requirements_report.md
+│       ├── restore-downloadmodels.sh
+│       ├── revertir_reorganizacion.sh
+│       ├── snapshot_estructura.sh
+│       ├── test_all_services.sh
+│       ├── verificar_ritual.sh
+│       ├── watch_all_requirements.sh
+│       ├── watch_requirements.py
+│       └── watch_requirements.sh
+├── check_ia_status.py
+├── cleanup_anu89.sh
+├── copyassets.sh
+├── data
+│   ├── animatediff
+│   ├── codellama
+│   ├── memgpt
+│   ├── stableaudio
+│   ├── stable-diffusion
+│   └── xtts-es
+├── diag_anu89_20250530_043704.md
+├── diag_anu89_20250530_050359.md
+├── diag_anu89_20250530_051523.md
+├── diag_anu89.sh
+├── diagnostico.sh
+├── docker
+│   ├── Dockerfile.backend
+│   └── Dockerfile.frontend
+├── docker-compose.generated.yml
+├── docker-compose.override.yml
+├── docker-compose-prod.yml
+├── docker-compose.yml
+├── .env.prod
+├── estructura_20250530.txt
+├── estructura.txt
+├── exportar_logs.sh
+├── exporting
+├── generate_compose.py
+├── .github
+│   └── workflows
+│       └── ci.yml
+├── .gitignore
+├── .gitignore.bak
+├── launch.sh
+├── LICENSE
+├── main_controller.py
+├── Makefile
+├── models
+│   ├── animatediff
+│   ├── codellama
+│   ├── comfyui
+│   ├── memgpt
+│   ├── musicgen
+│   ├── stableaudio
+│   ├── stable-diffusion
+│   └── xtts-es
+├── naming
+├── nginx.conf
+├── oldMakefile
+├── oldMakefile.extra
+├── package.json
+├── package-lock.json
+├── README.md
+├── restart_anu89.sh
+├── ritual-banner.txt
+├── scripts
+│   ├── auto_backup.sh
+│   ├── banner_anuu.txt
+│   ├── base_entrypoint.sh
+│   ├── check_dockerfile.py
+│   ├── check_model_versions.sh
+│   ├── check_permisos.sh
+│   ├── clean_empty_flags.sh
+│   ├── clean_requirements.py
+│   ├── diag_anu89.sh
+│   ├── diag_models.py
+│   ├── diag_requirements_full.py
+│   ├── diag_requirements.py
+│   ├── docker_clean_all.sh
+│   ├── docker-compose.yml
+│   ├── download_modelos.sh
+│   ├── download_models.sh
+│   ├── enlazar_modelos.sh
+│   ├── entrypoint.sh
+│   ├── fix_audit.sh
+│   ├── fix_dockerfiles.py
+│   ├── fix-permisos-models.sh
+│   ├── fix_permisos.sh
+│   ├── fix-permissions.sh
+│   ├── fix_requirements_fastapi.py
+│   ├── fix_vite.sh
+│   ├── generate_app_py.py
+│   ├── generate_docker_compose.py
+│   ├── generate_service_ia.py
+│   ├── link_all.sh
+│   ├── logs-service.sh
+│   ├── logs.sh
+│   ├── main_controller2.py
+│   ├── main_controller.py
+│   ├── prepare_structure.sh
+│   ├── prepare_structure_UNIFICADO.sh
+│   ├── reorganizar_estructura.sh
+│   ├── requirements_report.md
+│   ├── restore-downloadmodels.sh
+│   ├── revertir_reorganizacion.sh
+│   ├── run.sh
+│   ├── test_all_services.sh
+│   ├── verificar_ritual.sh
+│   ├── watch_all_requirements.sh
+│   ├── watch_requirements.py
+│   └── watch_requirements.sh
+├── Scripts principales del sistema.md
+├── scriptsAnu.zip
+├── services
+│   ├── animatediff -> /home/saze/Anuset/animatediff
+│   ├── audio
+│   │   ├── app.py
+│   │   ├── Dockerfile
+│   │   ├── download_models.sh
+│   │   ├── entrypoint.sh
+│   │   └── requirements.txt
+│   ├── backend
+│   │   ├── app.py
+│   │   ├── Dockerfile
+│   │   ├── generator.py
+│   │   ├── main_controller.py
+│   │   ├── main.py
+│   │   ├── mem0
+│   │   ├── requirements.txt
+│   │   ├── router_fastapi.py
+│   │   └── routes
+│   ├── codellama
+│   │   ├── app.py
+│   │   ├── Dockerfile
+│   │   ├── download_models.sh
+│   │   ├── entrypoint.sh
+│   │   ├── models
+│   │   └── requirements.txt
+│   ├── codigo
+│   │   ├── app.py
+│   │   ├── Dockerfile
+│   │   ├── download_models.sh
+│   │   ├── entrypoint.sh
+│   │   └── requirements.txt
+│   ├── comfyui
+│   │   ├── app.py
+│   │   ├── Dockerfile
+│   │   ├── download_models.sh
+│   │   ├── entrypoint.sh
+│   │   ├── models
+│   │   └── requirements.txt
+│   ├── estilo
+│   │   ├── app.py
+│   │   ├── Dockerfile
+│   │   ├── download_models.sh
+│   │   ├── entrypoint.sh
+│   │   └── requirements.txt
+│   ├── frontend
+│   │   ├── assets
+│   │   ├── dist
+│   │   ├── Dockerfile
+│   │   ├── entrypoint.sh
+│   │   ├── eslint.config.js
+│   │   ├── .gitignore
+│   │   ├── index.html
+│   │   ├── nginx.conf
+│   │   ├── package.json
+│   │   ├── package-lock.json
+│   │   ├── public
+│   │   ├── README.md
+│   │   ├── requirements.txt
+│   │   ├── ritual.js
+│   │   ├── src
+│   │   ├── style.css
+│   │   ├── styles
+│   │   └── vite.config.js
+│   ├── imagen
+│   │   ├── app.py
+│   │   ├── Dockerfile
+│   │   ├── download_models.sh
+│   │   ├── entrypoint.sh
+│   │   └── requirements.txt
+│   ├── interaccion
+│   │   ├── app.py
+│   │   ├── Dockerfile
+│   │   ├── download_models.sh
+│   │   ├── entrypoint.sh
+│   │   └── requirements.txt
+│   ├── mem0
+│   │   ├── app.py
+│   │   ├── Dockerfile
+│   │   ├── entrypoint.sh
+│   │   └── requirements.txt
+│   ├── memgpt
+│   │   ├── app.py
+│   │   ├── Dockerfile
+│   │   ├── entrypoint.sh
+│   │   ├── models
+│   │   └── requirements.txt
+│   ├── memoria
+│   │   ├── app.py
+│   │   ├── Dockerfile
+│   │   ├── download_models.sh
+│   │   ├── entrypoint.sh
+│   │   └── requirements.txt
+│   ├── musica
+│   │   ├── app.py
+│   │   ├── Dockerfile
+│   │   ├── download_models.sh
+│   │   ├── entrypoint.sh
+│   │   └── requirements.txt
+│   ├── musicgen
+│   │   ├── app.py
+│   │   ├── Dockerfile
+│   │   ├── download_models.sh
+│   │   ├── entrypoint.sh
+│   │   ├── models
+│   │   └── requirements.txt
+│   ├── openmemory
+│   │   ├── app.py
+│   │   ├── Dockerfile
+│   │   ├── entrypoint.sh
+│   │   └── requirements.txt
+│   ├── stableaudio
+│   │   ├── app.py
+│   │   ├── Dockerfile
+│   │   ├── entrypoint.sh
+│   │   ├── models
+│   │   └── requirements.txt
+│   ├── stable-diffusion
+│   │   ├── app.py
+│   │   ├── Dockerfile
+│   │   ├── download_models.sh
+│   │   ├── entrypoint.sh
+│   │   ├── models
+│   │   └── requirements.txt
+│   ├── video
+│   │   ├── app.py
+│   │   ├── Dockerfile
+│   │   ├── download_models.sh
+│   │   ├── entrypoint.sh
+│   │   └── requirements.txt
+│   ├── voz
+│   │   ├── app.py
+│   │   ├── Dockerfile
+│   │   ├── download_models.sh
+│   │   ├── entrypoint.sh
+│   │   └── requirements.txt
+│   └── xtts-es
+│       ├── app.py
+│       ├── Dockerfile
+│       ├── download_models.sh
+│       ├── entrypoint.sh
+│       ├── models
+│       └── requirements.txt
+├── servicestree
+├── start-internal.sh
+├── start.sh
+├── stop.sh
+├── sync_to_vault.sh
+├── tmp
+│   ├── CACHED
+│   ├── CANCELED
+│   ├── transferring
+│   ├── tree
+│   └── writing
+├── tor
+│   └── torrc
+├── treefinal
+├── treelargo
+├── volumes
+│   ├── cache
+│   ├── logs
+│   ├── models
+│   ├── outputs
+│   └── tmp
+├── watcher.py
+├── windows-launcher.bat
+└── WINDOWS.md
+
+108 directories, 1151 files

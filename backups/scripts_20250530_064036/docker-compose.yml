@@ -1,0 +1,158 @@
+version: '3.8'
+services:
+  animatediff:
+    container_name: animatediff
+    build:
+      context: ./services/animatediff
+    restart: unless-stopped
+    ports: []
+    networks:
+      - anuset_net
+  audio:
+    container_name: audio
+    build:
+      context: ./services/audio
+    restart: unless-stopped
+    ports: []
+    networks:
+      - anuset_net
+  codellama:
+    container_name: codellama
+    build:
+      context: ./services/codellama
+    restart: unless-stopped
+    ports: []
+    networks:
+      - anuset_net
+  codigo:
+    container_name: codigo
+    build:
+      context: ./services/codigo
+    restart: unless-stopped
+    ports: []
+    networks:
+      - anuset_net
+  comfyui:
+    container_name: comfyui
+    build:
+      context: ./services/comfyui
+    restart: unless-stopped
+    ports: []
+    networks:
+      - anuset_net
+  estilo:
+    container_name: estilo
+    build:
+      context: ./services/estilo
+    restart: unless-stopped
+    ports: []
+    networks:
+      - anuset_net
+  imagen:
+    container_name: imagen
+    build:
+      context: ./services/imagen
+    restart: unless-stopped
+    ports: []
+    networks:
+      - anuset_net
+  interaccion:
+    container_name: interaccion
+    build:
+      context: ./services/interaccion
+    restart: unless-stopped
+    ports: []
+    networks:
+      - anuset_net
+  mem0:
+    container_name: mem0
+    build:
+      context: ./services/mem0
+    restart: unless-stopped
+    ports: []
+    networks:
+      - anuset_net
+  memgpt:
+    container_name: memgpt
+    build:
+      context: ./services/memgpt
+    restart: unless-stopped
+    ports: []
+    networks:
+      - anuset_net
+  memoria:
+    container_name: memoria
+    build:
+      context: ./services/memoria
+    restart: unless-stopped
+    ports: []
+    networks:
+      - anuset_net
+  musica:
+    container_name: musica
+    build:
+      context: ./services/musica
+    restart: unless-stopped
+    ports: []
+    networks:
+      - anuset_net
+  musicgen:
+    container_name: musicgen
+    build:
+      context: ./services/musicgen
+    restart: unless-stopped
+    ports: []
+    networks:
+      - anuset_net
+  openmemory:
+    container_name: openmemory
+    build:
+      context: ./services/openmemory
+    restart: unless-stopped
+    ports: []
+    networks:
+      - anuset_net
+  stableaudio:
+    container_name: stableaudio
+    build:
+      context: ./services/stableaudio
+    restart: unless-stopped
+    ports: []
+    networks:
+      - anuset_net
+  stable-diffusion:
+    container_name: stable-diffusion
+    build:
+      context: ./services/stable-diffusion
+    restart: unless-stopped
+    ports: []
+    networks:
+      - anuset_net
+  video:
+    container_name: video
+    build:
+      context: ./services/video
+    restart: unless-stopped
+    ports: []
+    networks:
+      - anuset_net
+  voz:
+    container_name: voz
+    build:
+      context: ./services/voz
+    restart: unless-stopped
+    ports: []
+    networks:
+      - anuset_net
+  xtts-es:
+    container_name: xtts-es
+    build:
+      context: ./services/xtts-es
+    restart: unless-stopped
+    ports: []
+    networks:
+      - anuset_net
+
+networks:
+  anuset_net:
+    driver: bridge

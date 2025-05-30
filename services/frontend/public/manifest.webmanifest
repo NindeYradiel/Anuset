@@ -1,0 +1,21 @@
+{
+  "name": "Anuset89 Ritual",
+  "short_name": "Anuset89",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "#000000",
+  "theme_color": "#cba6f7",
+  "description": "Splash ritual cyberpunk para personalizar IA y lanzar WebUI",
+  "icons": [
+    {
+      "src": "/iconokali.jpg",
+      "sizes": "192x192",
+      "type": "image/jpeg"
+    },
+    {
+      "src": "/iconokali.jpg",
+      "sizes": "512x512",
+      "type": "image/jpeg"
+    }
+  ]
+}

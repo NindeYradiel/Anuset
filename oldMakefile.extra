@@ -1,0 +1,71 @@
+# Makefile.extra — Comandos extendidos para Anuset 🌌
+
+check-models:
+	@echo "🧪 Verificando versiones de modelos instalados..."
+	@bash scripts/check_model_versions.sh
+
+check-dockerfiles:
+	@echo "🧱 Revisando todos los Dockerfile..."
+	@python3 scripts/check_dockerfile.py
+
+check-permisos:
+	@echo "🔒 Verificando permisos de carpetas y scripts..."
+	@bash scripts/check_permisos.sh
+
+fix-permisos:
+	@echo "🔧 Corrigiendo permisos de archivos y carpetas importantes..."
+	@bash scripts/fix_permisos.sh
+
+diag-all:
+	@echo "🩻 Ejecutando todos los diagnósticos relevantes..."
+	@bash scripts/diag_anu89.sh
+	@python3 scripts/diag_requirements.py
+	@python3 scripts/diag_requirements_full.py
+
+models-download:
+	@echo "⬇️ Descargando modelos definidos..."
+	@bash scripts/download_models.sh
+
+models-restore:
+	@echo "🧬 Restaurando modelos desde backups..."
+	@bash scripts/restore-downloadmodels.sh
+
+models-enlazar:
+	@echo "🔗 Enlazando rutas simbólicas de modelos..."
+	@bash scripts/enlazar_modelos.sh
+
+models-listar:
+	@echo "📂 Listando modelos disponibles por servicio..."
+	@bash scripts/watch_all_requirements.sh
+
+models-sync:
+	@echo "🔄 Reintentando descargas o enlaces de modelos incompletos..."
+	@bash scripts/watch_requirements.sh
+
+structure-prepare:
+	@echo "🗂 Preparando estructura base..."
+	@bash scripts/prepare_structure.sh
+
+structure-prepare-full:
+	@echo "🗃 Estructura UNIFICADA + enlaces..."
+	@bash scripts/prepare_structure_UNIFICADO.sh
+
+structure-snapshot:
+	@echo "📸 Capturando snapshot de la estructura..."
+	@bash scripts/snapshot_estructura.sh
+
+structure-revert:
+	@echo "⏪ Revirtiendo reorganización reciente..."
+	@bash scripts/revertir_reorganizacion.sh
+
+fix-audit:
+	@echo "🩹 Corregir rutas auditadas en requirements..."
+	@python3 scripts/fix_requirements_fastapi.py
+
+fix-vite:
+	@echo "💫 Reparando configuración de Vite..."
+	@bash scripts/fix_vite.sh
+
+formulario-check:
+	@echo "📋 Verificando ritual inicial y JSONs generados..."
+	@bash scripts/verificar_ritual.sh

@@ -1,0 +1,272 @@
+.
+├── animatediff
+│   ├── app.py
+│   ├── Dockerfile
+│   ├── download_models.sh
+│   ├── entrypoint.sh
+│   └── requirements.txt
+├── anu_visual
+│   ├── AnuuAwakening.tsx
+│   ├── AnuuCanvas.tsx
+│   └── AnuuIcon.tsx
+├── arranque_verificacion.py
+├── backend
+│   ├── Dockerfile
+│   ├── generator.py
+│   ├── main_controller.py
+│   ├── main.py
+│   ├── mem0
+│   │   └── rituales
+│   │       └── llave_conexion.txt
+│   ├── requirements.txt
+│   ├── router_fastapi.py
+│   └── routes
+│       ├── despertar.py
+│       └── rituales.py
+├── CACHED
+├── CANCELED
+├── check_ia_status.py
+├── cleanup_anu89.sh
+├── copyassets.sh
+├── data
+│   ├── animatediff
+│   │   └── models
+│   │       └── download_models_20250529_201239.log
+│   ├── codellama
+│   │   └── models
+│   │       └── download_models_20250529_201239.log
+│   ├── memgpt
+│   │   └── models
+│   │       └── download_models_20250529_201239.log
+│   ├── stableaudio
+│   │   └── models
+│   │       └── download_models_20250529_201239.log
+│   ├── stable-diffusion
+│   │   └── models -> /home/saze/Respaldo/models
+│   └── xtts-es
+│       ├── model
+│       │   ├── data
+│       │   │   └── xtts-es
+│       │   │       └── model
+│       │   │           ├── config.json
+│       │   │           ├── dvae.pth
+│       │   │           ├── hash.md5
+│       │   │           ├── LICENSE.txt
+│       │   │           ├── mel_stats.pth
+│       │   │           ├── model.pth
+│       │   │           ├── README.md
+│       │   │           ├── samples
+│       │   │           │   ├── de_sample.wav
+│       │   │           │   ├── en_sample.wav
+│       │   │           │   ├── es_sample.wav
+│       │   │           │   ├── fr_sample.wav
+│       │   │           │   ├── ja-sample.wav
+│       │   │           │   ├── pt_sample.wav
+│       │   │           │   ├── tr_sample.wav
+│       │   │           │   └── zh-cn-sample.wav
+│       │   │           ├── speakers_xtts.pth
+│       │   │           └── vocab.json
+│       │   └── download_models_20250529_201239.log
+│       └── models
+├── diag_anu89.sh
+├── diagnostico.sh
+├── docker
+│   ├── Dockerfile.backend
+│   └── Dockerfile.frontend
+├── docker-compose.generated.yml
+├── docker-compose.override.yml
+├── docker-compose.yml
+├── download_models_20250529_201239.log
+├── exportar_logs.sh
+├── exporting
+├── frontend
+│   ├── assets
+│   │   ├── anuset89.png
+│   │   ├── foto_estrellas.jpg
+│   │   ├── riiize.jpg
+│   │   └── wallpaper.jpg
+│   ├── Dockerfile
+│   ├── eslint.config.js
+│   ├── index.html
+│   ├── nginx.conf
+│   ├── package.json
+│   ├── package-lock.json
+│   ├── public
+│   │   ├── fondo.png
+│   │   ├── font-console.css
+│   │   ├── iconokali.jpg
+│   │   ├── index.html
+│   │   ├── input-glow.css
+│   │   ├── manifest.webmanifest
+│   │   ├── musicaOcean.mp3
+│   │   ├── particles.js
+│   │   ├── rize-reflejo.css
+│   │   ├── service-worker.js
+│   │   ├── splash.css
+│   │   ├── splash.html
+│   │   ├── vite.svg
+│   │   └── webui-button.css
+│   ├── README.md
+│   ├── requirements.txt
+│   ├── ritual.js
+│   ├── src
+│   │   ├── App.css
+│   │   ├── App.jsx
+│   │   ├── AppWrapper.jsx
+│   │   ├── assets
+│   │   │   └── react.svg
+│   │   ├── components
+│   │   │   └── Ritual.jsx
+│   │   ├── index.css
+│   │   └── main.jsx
+│   ├── style.css
+│   ├── styles
+│   │   ├── ritual.css
+│   │   └── splash.css
+│   └── vite.config.js
+├── generate_compose.py
+├── launch.sh
+├── LICENSE
+├── main_controller.py
+├── models
+│   ├── animatediff
+│   ├── codellama
+│   ├── comfyui
+│   ├── memgpt
+│   ├── musicgen
+│   ├── stableaudio
+│   └── xtts-es
+├── naming
+├── nginx.conf
+├── package.json
+├── package-lock.json
+├── README.en.md
+├── README.md
+├── restart_anu89.sh
+├── scripts
+│   ├── base_entrypoint.sh
+│   ├── check_model_versions.sh
+│   ├── clean_empty_flags.sh
+│   ├── diag_anu89.sh
+│   ├── docker_clean_all.sh
+│   ├── download_modelos.sh
+│   ├── download_models.sh
+│   ├── fix_audit.sh
+│   ├── fix_dockerfiles.py
+│   ├── fix_vite.sh
+│   ├── generate_app_py.py
+│   ├── generate_service_ia.py
+│   ├── link_all.sh
+│   ├── main_controller2.py
+│   ├── main_controller.py
+│   ├── prepare_structure.sh
+│   ├── prepare_structure_UNIFICADO.sh
+│   └── restore-downloadmodels.sh
+├── Scripts principales del sistema.md
+├── services
+│   ├── animatediff
+│   │   ├── app.py
+│   │   ├── Dockerfile
+│   │   └── entrypoint.sh
+│   ├── audio
+│   │   ├── app.py
+│   │   ├── Dockerfile
+│   │   ├── entrypoint.sh
+│   │   └── __pycache__
+│   │       └── app.cpython-310.pyc
+│   ├── backend -> /home/saze/Anuset/backend
+│   ├── codellama
+│   │   ├── app.py
+│   │   ├── Dockerfile
+│   │   └── entrypoint.sh
+│   ├── codigo
+│   │   ├── app.py
+│   │   ├── Dockerfile
+│   │   ├── entrypoint.sh
+│   │   └── __pycache__
+│   │       └── app.cpython-310.pyc
+│   ├── comfyui
+│   │   ├── app.py
+│   │   ├── Dockerfile
+│   │   ├── entrypoint.sh
+│   │   └── requirements.txt
+│   ├── estilo
+│   │   ├── app.py
+│   │   ├── Dockerfile
+│   │   ├── entrypoint.sh
+│   │   └── __pycache__
+│   │       └── app.cpython-310.pyc
+│   ├── frontend -> /home/saze/Anuset/frontend
+│   ├── imagen
+│   │   ├── app.py
+│   │   ├── Dockerfile
+│   │   ├── entrypoint.sh
+│   │   └── __pycache__
+│   │       └── app.cpython-310.pyc
+│   ├── interaccion
+│   │   ├── app.py
+│   │   ├── Dockerfile
+│   │   ├── entrypoint.sh
+│   │   └── __pycache__
+│   │       └── app.cpython-310.pyc
+│   ├── mem0
+│   ├── memgpt
+│   │   ├── app.py
+│   │   ├── Dockerfile
+│   │   └── entrypoint.sh
+│   ├── memoria
+│   │   ├── app.py
+│   │   ├── Dockerfile
+│   │   ├── entrypoint.sh
+│   │   └── __pycache__
+│   │       └── app.cpython-310.pyc
+│   ├── musica
+│   │   ├── app.py
+│   │   ├── Dockerfile
+│   │   ├── entrypoint.sh
+│   │   └── __pycache__
+│   │       └── app.cpython-310.pyc
+│   ├── musicgen
+│   │   ├── app.py
+│   │   ├── Dockerfile
+│   │   └── entrypoint.sh
+│   ├── openmemory
+│   ├── stableaudio
+│   │   ├── app.py
+│   │   ├── Dockerfile
+│   │   └── entrypoint.sh
+│   ├── stable-diffusion
+│   │   ├── app.py
+│   │   ├── Dockerfile
+│   │   └── entrypoint.sh
+│   ├── video
+│   │   ├── app.py
+│   │   ├── Dockerfile
+│   │   ├── entrypoint.sh
+│   │   └── __pycache__
+│   │       └── app.cpython-310.pyc
+│   ├── voz
+│   │   ├── app.py
+│   │   ├── Dockerfile
+│   │   ├── entrypoint.sh
+│   │   └── __pycache__
+│   │       └── app.cpython-310.pyc
+│   └── xtts-es
+│       ├── app.py
+│       ├── Dockerfile
+│       └── entrypoint.sh
+├── services.zip
+├── start-internal.sh
+├── start.sh
+├── stop.sh
+├── sync_to_vault.sh
+├── tor
+│   └── torrc
+├── transferring
+├── tree
+├── watcher.py
+├── windows-launcher.bat
+├── WINDOWS.md
+└── writing
+
+74 directories, 196 files
