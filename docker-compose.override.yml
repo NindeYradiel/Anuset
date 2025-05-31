@@ -1,0 +1,54 @@
+services:
+  animatediff:
+    build: ./services/animatediff
+    container_name: animatediff
+    volumes:
+      - ./models/animatediff:/models
+    ports:
+      - "5111:8000"
+    restart: unless-stopped
+
+  comfyui:
+    build: ./services/comfyui
+    container_name: comfyui
+    volumes:
+      - ./models/comfyui:/models
+    ports:
+      - "5112:8000"
+    restart: unless-stopped
+
+  stableaudio:
+    build: ./services/stableaudio
+    container_name: stableaudio
+    volumes:
+      - ./models/stableaudio:/models
+    ports:
+      - "5113:8000"
+    restart: unless-stopped
+
+  musicgen:
+    build: ./services/musicgen
+    container_name: musicgen
+    volumes:
+      - ./models/musicgen:/models
+    ports:
+      - "5114:8000"
+    restart: unless-stopped
+
+  xtts-es:
+    build: ./services/xtts-es
+    container_name: xtts-es
+    volumes:
+      - ./models/xtts-es:/models
+    ports:
+      - "5115:8000"
+    restart: unless-stopped
+
+  codellama:
+    build: ./services/codellama
+    container_name: codellama
+    volumes:
+      - ./models/codellama:/models
+    ports:
+      - "5116:8000"
+    restart: unless-stopped

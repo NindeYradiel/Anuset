@@ -1,0 +1,244 @@
+# ==========================
+#   Makefile · Anuset 🜁
+# ==========================
+# Flujo principal con diagnósticos, generación de servicios IA, backups y mantenimiento.
+# Kali 🪷 2025
+# ==========================
+
+# 🐚 Rutas principales
+PROJECT_ROOT := $(CURDIR)
+BACKEND_DIR := backend
+FRONTEND_DIR := frontend
+SERVICES_DIR := services
+SCRIPTS_DIR := scripts
+DIAG_DIR := diag
+BACKUP_DIR := backups
+NOW := $(shell date +%Y%m%d_%H%M%S)
+
+# ==========================
+# 🎯 Objetivo por defecto
+# ==========================
+.DEFAULT_GOAL := help
+
+# ==========================
+# 🪄 Anuset - Menu 🎀
+# ==========================
+menu: ## 🪐 Muestra el menú de rituales con colores y emojis
+	@clear
+	@echo -e "\033[1;34m───────────────────────────────────────────────\033[0m"
+	@echo -e "\033[1;33m🌙  \033[1;36mAnuset Ritual Menu\033[0m"
+	@echo -e "\033[1;34m───────────────────────────────────────────────\033[0m"
+	@echo -e "\033[1;37m1.\033[0m Instalación completa      \033[1;35m→ make install-all\033[0m"
+	@echo -e "\033[1;37m2.\033[0m Solo backend               \033[1;35m→ make install-backend\033[0m"
+	@echo -e "\033[1;37m3.\033[0m Solo frontend              \033[1;35m→ make install-frontend\033[0m"
+	@echo -e "\033[1;37m4.\033[0m Iniciar contenedores       \033[1;35m→ make up-all\033[0m"
+	@echo -e "\033[1;37m5.\033[0m Diagnóstico completo       \033[1;35m→ make diag\033[0m"
+	@echo -e "\033[1;37m6.\033[0m Ver logs (todos)           \033[1;35m→ make view-logs\033[0m"
+	@echo -e "\033[1;37m7.\033[0m Ver logs (servicio)        \033[1;35m→ make view-logs-service SERVICE=<nombre>\033[0m"
+	@echo -e "\033[1;37m8.\033[0m Backup completo            \033[1;35m→ make backup\033[0m"
+	@echo -e "\033[1;37m9.\033[0m Limpiar requisitos         \033[1;35m→ make clean-requirements\033[0m"
+	@echo -e "\033[1;37m10.\033[0m Reparar permisos generales  \033[1;35m→ make fix-permissions\033[0m"
+	@echo -e "\033[1;37m11.\033[0m Salir                      \033[1;35m→\033[0m"
+	@echo -e "\033[1;34m───────────────────────────────────────────────\033[0m"
+	@echo -e "\033[1;31m❗ Usa: make <comando> para invocar el ritual.\033[0m"
+
+# ==========================
+# 🛠️ Instalación
+# ==========================
+install-backend: ## 🚧 Instala dependencias del backend (FastAPI)
+	cd $(BACKEND_DIR) && pip install -r requirements.txt
+
+install-frontend: ## 🎨 Instala dependencias del frontend (React/Vite)
+	cd $(FRONTEND_DIR) && npm install
+
+install-all: install-backend install-frontend ## 🚀 Instalación completa
+
+# ==========================
+# 🚀 Servicio Docker
+# ==========================
+up-all: ## 🔄 Levanta todos los contenedores (frontend + backend + IA)
+	docker compose up -d
+
+down-all: ## 💀 Detiene todos los contenedores
+	docker compose down
+
+rebuild-all: ## 🔁 Reconstruye todos los servicios sin cache
+	docker compose build --no-cache
+
+# ==========================
+# 🧾 Diagnóstico y Verificación
+# ==========================
+diag: ## 🩺 Ejecución completa de diagnósticos
+	bash $(SCRIPTS_DIR)/diag_anu89.sh --all
+
+diag-reqs: ## 📦 Verifica requirements.txt de servicios IA
+	python3 $(SCRIPTS_DIR)/diag_requirements.py
+
+check-dockerfiles: ## 🐳 Valida todos los Dockerfiles de servicios IA
+	python3 $(SCRIPTS_DIR)/check_dockerfile.py
+
+# ==========================
+# 🔐 Permisos y Limpieza
+# ==========================
+fix-permissions: ## 🔧 Corrige permisos de scripts y servicios IA
+	bash $(SCRIPTS_DIR)/fix-permissions.sh
+
+fix-models: ## 🔒 Ajusta permisos dentro de carpeta models
+	bash $(SCRIPTS_DIR)/fix_model_permissions.sh
+
+clean-requirements: ## 🧹 Elimina dependencias duplicadas en requirements.txt
+	python3 $(SCRIPTS_DIR)/clean_requirements.py
+
+clean-empty-flags: ## 🧹 Elimina flags vacíos en configuraciones
+	bash $(SCRIPTS_DIR)/clean_empty_flags.sh
+
+fix-symlinks: ## 🔗 Repara enlaces simbólicos rotos
+	bash $(SCRIPTS_DIR)/fix_symlinks.sh
+
+# ==========================
+# 🧱 Estructura y Generación IA
+# ==========================
+init-structure: ## 🧱 Crea estructura base del proyecto (backend, frontend, services, logs)
+	bash $(SCRIPTS_DIR)/init_structure.sh
+
+prepare-structure: ## 🏗️ Prepara carpetas para servicios IA
+	bash $(SCRIPTS_DIR)/prepare_structure.sh
+
+generate-service: ## 🐱✨ Genera nuevo servicio IA: make generate-service NAME=<servicio>
+	python3 $(SCRIPTS_DIR)/generate_service_ia.py $(NAME)
+
+generate-compose: ## 📦 Genera o actualiza docker-compose.yml con servicios IA
+	python3 $(SCRIPTS_DIR)/generate_docker_compose.py
+
+generate-app: ## 🐱✨ Genera app.py base para servicio IA: make generate-app NAME=<servicio>
+	python3 $(SCRIPTS_DIR)/generate_app_py.py $(NAME)
+
+download-models: ## ⬇️ Descarga modelos IA para servicios
+	bash $(SCRIPTS_DIR)/download_models.sh
+
+# ==========================
+# 🧙‍♂️ Controladores & Pruebas
+# ==========================
+prepare-entrypoints: ## 🎬 Copia entrypoint universal a cada servicio IA
+	bash $(SCRIPTS_DIR)/entrypoint.sh
+
+control-main: ## 🔮 Ejecuta main_controller para servicios IA
+	python3 $(SCRIPTS_DIR)/main_controller.py
+
+link-models: ## 🔗 Enlaza modelos compartidos entre servicios IA
+	bash $(SCRIPTS_DIR)/link_models.sh
+
+test-all: ## 🧪 Ejecuta pruebas unitarias de todos los servicios IA
+	bash $(SCRIPTS_DIR)/test_all_services.sh
+
+# ==========================
+# 📜 Logs y Estado
+# ==========================
+view-logs: ## 📜 Muestra logs de todos los contenedores
+	bash $(SCRIPTS_DIR)/view_logs.sh
+
+view-logs-service: ## 📜 Muestra logs de un servicio IA específico: make view-logs-service SERVICE=<nombre>
+	bash $(SCRIPTS_DIR)/view_logs_service.sh $(SERVICE)
+
+exorcismo: ## ☠️ Elimina todos los contenedores IA (anuset_*)
+	bash $(SCRIPTS_DIR)/killall.sh
+
+# ==========================
+# 📦 Backup y Restauración
+# ==========================
+backup: ## 💾 Realiza backup completo de servicios IA y modelos
+	mkdir -p $(BACKUP_DIR)
+	tar -czf $(BACKUP_DIR)/anuset_backup_$(NOW).tar.gz 		$(SERVICES_DIR)
+	echo "📦 Backup generado en $(BACKUP_DIR)/anuset_backup_$(NOW).tar.gz"
+
+restore: ## 🔄 Restaura último backup (scripts específicos necesarios)
+	bash $(SCRIPTS_DIR)/restore-downloadmodels.sh
+
+autofix:  ## 🛠️ Repara errores comunes en servicios
+	python3 scripts/main_controller.py --fix
+
+fix-host-perms:  ## 🔐 Aplica permisos correctos a todos los archivos desde el host
+	sudo chown -R $(USER):$(USER) services/
+	sudo find services/ -type f -name "*.sh" -exec chmod 755 {} \;
+	sudo find services/ -type f -name "app.py" -exec chmod 644 {} \;
+	sudo find services/ -type f -name "requirements.txt" -exec chmod 644 {} \;
+
+# ==========================
+# 🔧 Parchear Dockerfiles
+# ==========================
+patch-dockerfiles:  ## 🩹 Corrige Dockerfiles con COPY --chown y USER appuser al final
+	find services/ -name Dockerfile -exec \
+	sed -i \
+		-e '/COPY requirements.txt/ s/COPY/COPY --chown=appuser:appuser/' \
+		-e '/COPY \. \./ s/COPY/COPY --chown=appuser:appuser/' \
+		-e '/RUN chmod/d' \
+		-e '/RUN chown/d' {} \; && \
+	for f in $$(find services/ -name Dockerfile); do \
+		awk '/^USER appuser/ { next } { print } END { print "USER appuser" }' $$f > $$f.tmp && mv $$f.tmp $$f; \
+	done
+	@echo "🩹 Dockerfiles parchados con COPY --chown=appuser:appuser y USER appuser al final."
+
+
+# ==========================
+# 🔧 Permisos de requirements
+# ==========================
+fix-requirements-perms:  ## 🔧 Corrige permisos de requirements.txt en todos los servicios IA
+	@echo "🔧 Corrigiendo permisos de requirements.txt en $(SERVICES_DIR)/*/"
+	@find $(SERVICES_DIR) -type f -name requirements.txt -exec chmod 644 {} \;
+	@echo "✅ Permisos de requirements.txt corregidos."
+
+# ==========================
+# 📖 Ayuda
+# ==========================
+help: ## 📜 Muestra comandos básicos disponibles
+	@echo ""
+	@echo "🐾  Comandos de Anuset:"
+	@echo "───────────────────────────────────────────────"
+	@grep -E '^[a-zA-Z0-9_-]+:.*?##' $(MAKEFILE_LIST) \
+		| awk 'BEGIN {FS = ":.*?##"}; {printf "  \033[36m%-20s\033[0m %s\n", $$1, $$2}'
+	@echo ""
+
+ritual-instalacion:  ## 🌌 Ritual completo de instalación y despliegue
+
+help-advanced: ## 🐱✨ Muestra ayuda detallada con rutas y variables
+	@echo ""
+	@echo "🔧 Variables de entorno:"
+	@echo "  BACKEND_DIR    = $(BACKEND_DIR)"
+	@echo "  FRONTEND_DIR   = $(FRONTEND_DIR)"
+	@echo "  SERVICES_DIR   = $(SERVICES_DIR)"
+	@echo "  SCRIPTS_DIR    = $(SCRIPTS_DIR)"
+	@echo "  DIAG_DIR       = $(DIAG_DIR)"
+	@echo "  BACKUP_DIR     = $(BACKUP_DIR)"
+	@echo ""
+	@grep -E '^[a-zA-Z0-9_-]+:.*?##' $(MAKEFILE_LIST) \
+		| awk 'BEGIN {FS = ":.*?##"}; {printf "  \033[35m%-22s\033[0m %s\n", $$1, $$2}'
+	@echo ""
+
+ritual-instalacion:  ## 🌌 Ritual completo de instalación y despliegue
+	@clear
+	@echo "🌌 Invocando el ritual de instalación de Anuset..."
+	@echo "🐾 Que Anu prepare tu sistema para la iluminación IA 🛠️🌠"
+	$(MAKE) fix-permissions
+	$(MAKE) fix-models
+	$(MAKE) fix-symlinks
+	$(MAKE) patch-dockerfiles   # 👁️ Evita errores de chmod o COPY global
+	$(MAKE) fix-requirements-perms
+	$(MAKE) clean-requirements
+	$(MAKE) autofix
+	python3 scripts/main_controller.py --check || true
+	$(MAKE) download-models || true
+	@echo "✨ Verificación tras autofix:"
+	python3 scripts/main_controller.py --check || true
+	$(MAKE) up-all
+	@echo ""
+	@echo "🧪 Verificando estado de contenedores..."
+	@docker ps -a --format "table {{.Names}}\t{{.Status}}" | grep -E 'Restarting|Exited' || echo '✅ Todos los contenedores están corriendo correctamente.'
+	@echo ""
+	@echo "🎉 Ritual completado con éxito. Visita: http://localhost:3000"
+
+
+
+
+# ==========================
+# 🐾 Fin del Makefile · Anuset
+# ==========================

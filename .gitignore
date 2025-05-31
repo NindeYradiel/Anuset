@@ -1,0 +1,39 @@
+# ⚙️ Ignorar entornos virtuales
+venv/
+.env
+*.env
+
+# ⚙️ Ignorar dependencias
+**/node_modules/
+**/__pycache__/
+**/.pytest_cache/
+**/.mypy_cache/
+
+# ⚙️ Ignorar compilados y artefactos
+*.pyc
+*.pyo
+*.pyd
+*.log
+*.db
+*.sqlite3
+*.zip
+*.tar.gz
+*.egg-info/
+dist/
+build/
+
+# ⚙️ Ignorar artefactos frontend
+**/dist/
+**/build/
+**/.vite/
+**/.DS_Store
+
+# ⚙️ Ignorar archivos de sistema y editor
+.idea/
+.vscode/
+*.swp
+*~
+
+# ⚙️ Ignorar docker internos temporales
+docker-volumes/
+**/model-cache/

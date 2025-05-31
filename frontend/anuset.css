@@ -1,0 +1,70 @@
+/* anuset.css - estilo místico cyberpunk con estrellas */
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  font-family: 'Orbitron', sans-serif;
+  background-color: #0a001f;
+  color: #e0d4ff;
+}
+
+canvas#stars {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+#main-container {
+  position: relative;
+  z-index: 1;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+h1 {
+  font-size: 3rem;
+  color: #d0b0ff;
+  text-shadow: 0 0 15px #b279ff;
+  animation: glow 4s ease-in-out infinite alternate;
+}
+
+p {
+  font-size: 1.2rem;
+  max-width: 600px;
+  color: #c8b3ec;
+  margin: 1rem auto;
+}
+
+button.ritual-button {
+  background: linear-gradient(45deg, #7f5cff, #c780ff);
+  border: none;
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+  color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #b279ff;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+button.ritual-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px #d8b8ff;
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 10px #b279ff;
+  }
+  to {
+    text-shadow: 0 0 20px #ffffff, 0 0 30px #d8b8ff;
+  }
+}

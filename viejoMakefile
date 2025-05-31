@@ -1,0 +1,484 @@
+# ════════════════════════════════════════
+# 🌌 Anuset-FINAL :: Makefile Principal
+# ════════════════════════════════════════
+# Uso:     make <comando>
+# Requiere: bash, docker, python3
+
+SHELL := /bin/bash
+.DEFAULT_GOAL := help
+
+# Variables globales
+DATE := $(shell date +%Y%m%d_%H%M%S)
+ZIP_NAME := Anuset-FINAL_backup_$(DATE).zip
+
+# ════════════════════════════════════════
+# 🚀 INICIO Y GESTIÓN DE SERVICIOS
+# ════════════════════════════════════════
+
+up: check-env fix-all clean-requirements check-models  ## 🔄 Levanta todos los servicios
+	docker compose up -d --build
+	$(call mostrar_servicios_emoji)
+
+up-anuset: check-env fix-all clean-requirements check-models  ## 🚀 Solo frontend+backend
+	docker compose up -d --build frontend backend
+	@echo "✅ Splash: http://localhost:3000"
+	@if docker ps --format '{{.Names}}' | grep -qi 'webui'; then \
+		echo '🧒 WebUI: http://localhost:8080'; \
+	else \
+		echo '⚠️  WebUI no activo. Usa: make up-webui'; \
+	fi
+	@echo "✨ Ritual invocado con éxito. Que Anu te guíe 🐾🌠"
+
+down:  ## 💕 Detiene todos los servicios
+	docker compose down
+
+restart:  ## 🔁 Reinicia todos los servicios
+	$(MAKE) down
+	$(MAKE) up
+
+restart-service:  ## 🔁 Reinicia un servicio: SERVICE=nombre
+ifndef SERVICE
+	$(error ❌ Debe definir SERVICE=nombre del servicio)
+endif
+	docker restart $(SERVICE)
+
+# ════════════════════════════════════════
+# 🔐 PERMISOS Y CONFIGURACIÓN
+# ════════════════════════════════════════
+
+check-env:  ## ⚙️ Verifica Docker y Python
+	@command -v docker >/dev/null || { echo '❌ Falta Docker'; exit 1; }
+	@command -v python3 >/dev/null || { echo '❌ Falta Python3'; exit 1; }
+	@echo "✅ Entorno verificado"
+
+fix-all: fix-permissions fix-permisos-models  ## 🔧 Arregla permisos globales
+
+fix-permissions:  ## 🔐 Scripts ejecutables
+	chmod +x scripts/*.sh || true
+	find services/ -type f -name '*.sh' -exec chmod +x {} +
+
+fix-permisos-models:  ## 🔐 Modelos IA
+	@if [ -f scripts/fix-permisos-models.sh ]; then \
+		bash scripts/fix-permisos-models.sh; \
+	else \
+		echo "🟡 Script faltante: fix-permisos-models.sh"; \
+	fi
+
+# ════════════════════════════════════════
+# 🧠 DIAGNÓSTICOS Y VERIFICACIONES
+# ════════════════════════════════════════
+
+diag: backup  ## 🧠 Diagnóstico completo
+	bash scripts/diag_anu89.sh
+
+health:  ## 📊 Estado básico de servicios
+	bash scripts/diag_anu89.sh --check
+
+check-models:  ## 📦 Modelos IA detectados
+	bash scripts/diag_anu89.sh --models
+
+check-ci:  ## 🔍 Verifica estructura básica
+	@echo "🔍 Verificando estructura..."
+	@test -d backend && echo "✅ backend/ OK" || (echo "❌ Falta backend/" && exit 1)
+	@test -f backend/app.py && echo "✅ app.py OK" || (echo "❌ Falta app.py" && exit 1)
+	@test -d frontend && echo "✅ frontend/ OK" || (echo "❌ Falta frontend/" && exit 1)
+	@test -f frontend/vite.config.ts && echo "✅ vite.config.ts OK" || (echo "❌ Falta vite.config.ts" && exit 1)
+	@python3 -m py_compile backend/app.py || (echo "❌ Error en backend/app.py" && exit 1)
+
+diag-req: backup  ## 📋 Verifica requirements.txt
+	python3 scripts/diag_requirements.py
+
+diag-req-full: backup  ## 📋 Verificación profunda de requisitos
+	python3 scripts/diag_requirements_full.py
+
+check-dockerfiles: backup  ## 🐳 Dockerfiles válidos
+	python3 scripts/check_dockerfile.py
+
+test-all: backup  ## 🧪 Pruebas en todos los servicios IA
+	bash scripts/test_all_services.sh
+
+verificar-ritual: backup  ## 🔮 Verifica rituales activos
+	bash scripts/verificar_ritual.sh
+
+# ════════════════════════════════════════
+# 🌠 RITUALES Y RESET
+# ════════════════════════════════════════
+
+ritual:  ## 🌠 Ritual completo místico
+	@clear
+	@cat scripts/banner_anuu.txt
+	$(MAKE) fix-all
+	$(MAKE) check-models
+	$(MAKE) clean-requirements
+	$(MAKE) diag
+	$(MAKE) snapshot
+	@echo "🌌 Ritual completado. Que Anu te acompañe 🐾"
+
+reset-hard: clean-containers fix-all up test-all  ## ♻️ Reinicio total y limpio
+
+# ════════════════════════════════════════
+# 🧼 MANTENIMIENTO Y LIMPIEZA
+# ════════════════════════════════════════
+
+clean-requirements:  ## 🧹 Limpia duplicados
+	python3 scripts/clean_requirements.py
+
+clean-empty-flags:  ## 🧹 Elimina flags vacíos
+	bash scripts/clean_empty_flags.sh
+
+clean-containers:  ## ⚠️ Elimina todos los contenedores
+	-docker rm -f $$(docker ps -aq) || true
+
+fix-symlinks:  ## 🔗 Repara enlaces simbólicos
+	bash scripts/fix_symlinks.sh
+
+purga:  ## 🧼 Mueve archivos pesados a backup
+	bash scripts/purga.sh
+
+# ════════════════════════════════════════
+# 📦 BACKUPS Y SNAPSHOTS
+# ════════════════════════════════════════
+
+backup:  ## 🔒 Backup general
+	bash scripts/auto_backup.sh
+
+zip:  ## 📦 Genera ZIP limpio
+	zip -r $(ZIP_NAME) . \
+		-x "*.git/*" "backups/*" "Respaldo/*" \
+		"*.safetensors" "*.ckpt" "*.pth" "*.bin" "*.onnx" \
+		"frontend/node_modules/*" "backend/__pycache__/*" "tests/*" "notebooks/*"
+	@echo "✅ ZIP creado: $(ZIP_NAME)"
+
+snapshot: backup  ## 📸 Snapshot de estructura
+	bash scripts/snapshot_estructura.sh
+
+# ════════════════════════════════════════
+# 🧱 GENERACIÓN DE SERVICIOS
+# ════════════════════════════════════════
+
+generate-app: backup  ## 🧠 Genera app.py IA
+	python3 scripts/generate_app_py.py
+
+generate-service-ia: backup  ## 🧠 Servicio IA estándar
+	python3 scripts/generate_service_ia.py
+
+prepare-structure: backup  ## 🧱 Estructura modular
+	bash scripts/prepare_structure.sh
+
+prepare-unificado: backup  ## 🧱 Estructura UNIFICADA
+	bash scripts/prepare_structure_UNIFICADO.sh
+
+reorganizar: backup  ## 📂 Reorganiza carpetas IA
+	bash scripts/reorganizar_estructura.sh
+
+revertir: backup  ## ↩️ Reversión de estructura
+	bash scripts/revertir_reorganizacion.sh
+
+enlazar-modelos: backup  ## 🔗 Enlaza modelos IA
+	bash scripts/enlazar_modelos.sh
+
+force-link-models:  ## 🔗 Fuerza re-enlace
+	bash scripts/enlazar_modelos.sh --force
+
+# ════════════════════════════════════════
+# 📜 LOGS Y ESTADO DEL SISTEMA
+# ════════════════════════════════════════
+
+logs:  ## 📜 Logs de todos los contenedores
+	@for container in $(shell docker ps --format '{{.Names}}'); do \
+		echo -e "\n=== $$container ==="; \
+		docker logs --tail=10 $$container 2>/dev/null || echo "❌ No se encontró el contenedor"; \
+	done
+
+logs-service:  ## 📜 Logs de un servicio: SERVICE=nombre
+ifndef SERVICE
+	$(error ❌ Debe definir SERVICE=nombre)
+endif
+	docker logs --tail=20 $(SERVICE)
+
+status-check:  ## 📈 Estado actual
+	docker ps --format "table {{.Names}}\t{{.Status}}\t{{.Ports}}"
+
+puertos:  ## 🔌 Puertos en uso
+	docker ps --format "table {{.Names}}\t{{.Ports}}"
+
+# ════════════════════════════════════════
+# 🚀 PRODUCCIÓN Y DESPLIEGUE
+# ════════════════════════════════════════
+
+deploy:  ## 🚀 Despliegue en producción
+	docker compose -f docker-compose.prod.yml up -d --build
+
+teardown:  ## 💥 Detiene producción
+	docker compose -f docker-compose.prod.yml down
+
+# ════════════════════════════════════════
+# 📖 AYUDA Y DOCUMENTACIÓN
+# ════════════════════════════════════════
+
+help:  ## 📖 Ayuda básica de comandos
+	@echo -e "\n🌌 \033[1;36mAnuset-FINAL :: Comandos disponibles\033[0m"
+	@echo "────────────────────────────────────────────"
+	@awk 'BEGIN {FS = ":.*?## "}; /^[a-zA-Z0-9\-_]+:.*?## / {printf "✨ \033[1;33m%-25s\033[0m %s\n", $$1, $$2}' $(MAKEFILE_LIST) | sort
+	@echo -e "\n🐾 Usa \033[1;32mmake <comando>\033[0m para ejecutar. Que Anu te ilumine ✨"
+
+help-advanced:  ## 🧙 Ayuda extendida con rutas
+	@echo -e "\n🌌 \033[1;36mAnuset-FINAL :: Ayuda extendida\033[0m"
+	@echo "────────────────────────────────────────────"
+	@echo "📁 Carpeta del proyecto: $(CURDIR)"
+	@echo "📦 ZIP por defecto: $(ZIP_NAME)"
+	@echo "📜 Requisitos: Docker, Bash, Python3"
+	@echo "📑 Rutas clave:"
+	@echo " - scripts/: Scripts utilitarios (bash/py)"
+	@echo " - services/: Servicios IA simbólicos"
+	@echo " - backend/: API FastAPI"
+	@echo " - frontend/: Interfaz Vite + React"
+	@echo " - backups/: Snapshots y archivos guardados"
+	@echo ""
+	@echo "🔧 Variables útiles:"
+	@echo " - SERVICE=nombre     (logs, restart, etc.)"
+	@echo " - ZIP_NAME=archivo.zip"
+	@echo ""
+	@echo "🌠 Comandos místicos: make ritual, make snapshot, make purga"
+
+# ════════════════════════════════════════
+# 🌌 Anuset-FINAL :: Makefile Principal
+# ════════════════════════════════════════
+# Uso:     make <comando>
+# Requiere: bash, docker, python3
+
+SHELL := /bin/bash
+.DEFAULT_GOAL := help
+
+# Variables globales
+DATE := $(shell date +%Y%m%d_%H%M%S)
+ZIP_NAME := Anuset-FINAL_backup_$(DATE).zip
+
+# ════════════════════════════════════════
+# 🚀 INICIO Y GESTIÓN DE SERVICIOS
+# ════════════════════════════════════════
+
+up: check-env fix-all clean-requirements check-models  ## 🔄 Levanta todos los servicios
+	docker compose up -d --build
+	$(call mostrar_servicios_emoji)
+
+up-anuset: check-env fix-all clean-requirements check-models  ## 🚀 Solo frontend+backend
+	docker compose up -d --build frontend backend
+	@echo "✅ Splash: http://localhost:3000"
+	@if docker ps --format '{{.Names}}' | grep -qi 'webui'; then \
+		echo '🧒 WebUI: http://localhost:8080'; \
+	else \
+		echo '⚠️  WebUI no activo. Usa: make up-webui'; \
+	fi
+	@echo "✨ Ritual invocado con éxito. Que Anu te guíe 🐾🌠"
+
+down:  ## 💕 Detiene todos los servicios
+	docker compose down
+
+restart:  ## 🔁 Reinicia todos los servicios
+	$(MAKE) down
+	$(MAKE) up
+
+restart-service:  ## 🔁 Reinicia un servicio: SERVICE=nombre
+ifndef SERVICE
+	$(error ❌ Debe definir SERVICE=nombre del servicio)
+endif
+	docker restart $(SERVICE)
+
+# ════════════════════════════════════════
+# 🔐 PERMISOS Y CONFIGURACIÓN
+# ════════════════════════════════════════
+
+check-env:  ## ⚙️ Verifica Docker y Python
+	@command -v docker >/dev/null || { echo '❌ Falta Docker'; exit 1; }
+	@command -v python3 >/dev/null || { echo '❌ Falta Python3'; exit 1; }
+	@echo "✅ Entorno verificado"
+
+fix-all: fix-permissions fix-permisos-models  ## 🔧 Arregla permisos globales
+
+fix-permissions:  ## 🔐 Scripts ejecutables
+	chmod +x scripts/*.sh || true
+	find services/ -type f -name '*.sh' -exec chmod +x {} +
+
+fix-permisos-models:  ## 🔐 Modelos IA
+	@if [ -f scripts/fix-permisos-models.sh ]; then \
+		bash scripts/fix-permisos-models.sh; \
+	else \
+		echo "🟡 Script faltante: fix-permisos-models.sh"; \
+	fi
+
+# ════════════════════════════════════════
+# 🧠 DIAGNÓSTICOS Y VERIFICACIONES
+# ════════════════════════════════════════
+
+diag: backup  ## 🧠 Diagnóstico completo
+	bash scripts/diag_anu89.sh
+
+health:  ## 📊 Estado básico de servicios
+	bash scripts/diag_anu89.sh --check
+
+check-models:  ## 📦 Modelos IA detectados
+	bash scripts/diag_anu89.sh --models
+
+check-ci:  ## 🔍 Verifica estructura básica
+	@echo "🔍 Verificando estructura..."
+	@test -d backend && echo "✅ backend/ OK" || (echo "❌ Falta backend/" && exit 1)
+	@test -f backend/app.py && echo "✅ app.py OK" || (echo "❌ Falta app.py" && exit 1)
+	@test -d frontend && echo "✅ frontend/ OK" || (echo "❌ Falta frontend/" && exit 1)
+	@test -f frontend/vite.config.ts && echo "✅ vite.config.ts OK" || (echo "❌ Falta vite.config.ts" && exit 1)
+	@python3 -m py_compile backend/app.py || (echo "❌ Error en backend/app.py" && exit 1)
+
+diag-req: backup  ## 📋 Verifica requirements.txt
+	python3 scripts/diag_requirements.py
+
+diag-req-full: backup  ## 📋 Verificación profunda de requisitos
+	python3 scripts/diag_requirements_full.py
+
+check-dockerfiles: backup  ## 🐳 Dockerfiles válidos
+	python3 scripts/check_dockerfile.py
+
+test-all: backup  ## 🧪 Pruebas en todos los servicios IA
+	bash scripts/test_all_services.sh
+
+verificar-ritual: backup  ## 🔮 Verifica rituales activos
+	bash scripts/verificar_ritual.sh
+
+# ════════════════════════════════════════
+# 🌠 RITUALES Y RESET
+# ════════════════════════════════════════
+
+ritual:  ## 🌠 Ritual completo místico
+	@clear
+	@cat scripts/banner_anuu.txt
+	$(MAKE) fix-all
+	$(MAKE) check-models
+	$(MAKE) clean-requirements
+	$(MAKE) diag
+	$(MAKE) snapshot
+	@echo "🌌 Ritual completado. Que Anu te acompañe 🐾"
+
+reset-hard: clean-containers fix-all up test-all  ## ♻️ Reinicio total y limpio
+
+# ════════════════════════════════════════
+# 🧼 MANTENIMIENTO Y LIMPIEZA
+# ════════════════════════════════════════
+
+clean-requirements:  ## 🧹 Limpia duplicados
+	python3 scripts/clean_requirements.py
+
+clean-empty-flags:  ## 🧹 Elimina flags vacíos
+	bash scripts/clean_empty_flags.sh
+
+clean-containers:  ## ⚠️ Elimina todos los contenedores
+	-docker rm -f $$(docker ps -aq) || true
+
+fix-symlinks:  ## 🔗 Repara enlaces simbólicos
+	bash scripts/fix_symlinks.sh
+
+purga:  ## 🧼 Mueve archivos pesados a backup
+	bash scripts/purga.sh
+
+# ════════════════════════════════════════
+# 📦 BACKUPS Y SNAPSHOTS
+# ════════════════════════════════════════
+
+backup:  ## 🔒 Backup general
+	bash scripts/auto_backup.sh
+
+zip:  ## 📦 Genera ZIP limpio
+	zip -r $(ZIP_NAME) . \
+		-x "*.git/*" "backups/*" "Respaldo/*" \
+		"*.safetensors" "*.ckpt" "*.pth" "*.bin" "*.onnx" \
+		"frontend/node_modules/*" "backend/__pycache__/*" "tests/*" "notebooks/*"
+	@echo "✅ ZIP creado: $(ZIP_NAME)"
+
+snapshot: backup  ## 📸 Snapshot de estructura
+	bash scripts/snapshot_estructura.sh
+
+# ════════════════════════════════════════
+# 🧱 GENERACIÓN DE SERVICIOS
+# ════════════════════════════════════════
+
+generate-app: backup  ## 🧠 Genera app.py IA
+	python3 scripts/generate_app_py.py
+
+generate-service-ia: backup  ## 🧠 Servicio IA estándar
+	python3 scripts/generate_service_ia.py
+
+prepare-structure: backup  ## 🧱 Estructura modular
+	bash scripts/prepare_structure.sh
+
+prepare-unificado: backup  ## 🧱 Estructura UNIFICADA
+	bash scripts/prepare_structure_UNIFICADO.sh
+
+reorganizar: backup  ## 📂 Reorganiza carpetas IA
+	bash scripts/reorganizar_estructura.sh
+
+revertir: backup  ## ↩️ Reversión de estructura
+	bash scripts/revertir_reorganizacion.sh
+
+enlazar-modelos: backup  ## 🔗 Enlaza modelos IA
+	bash scripts/enlazar_modelos.sh
+
+force-link-models:  ## 🔗 Fuerza re-enlace
+	bash scripts/enlazar_modelos.sh --force
+
+# ════════════════════════════════════════
+# 📜 LOGS Y ESTADO DEL SISTEMA
+# ════════════════════════════════════════
+
+logs:  ## 📜 Logs de todos los contenedores
+	@for container in $(shell docker ps --format '{{.Names}}'); do \
+		echo -e "\n=== $$container ==="; \
+		docker logs --tail=10 $$container 2>/dev/null || echo "❌ No se encontró el contenedor"; \
+	done
+
+logs-service:  ## 📜 Logs de un servicio: SERVICE=nombre
+ifndef SERVICE
+	$(error ❌ Debe definir SERVICE=nombre)
+endif
+	docker logs --tail=20 $(SERVICE)
+
+status-check:  ## 📈 Estado actual
+	docker ps --format "table {{.Names}}\t{{.Status}}\t{{.Ports}}"
+
+puertos:  ## 🔌 Puertos en uso
+	docker ps --format "table {{.Names}}\t{{.Ports}}"
+
+# ════════════════════════════════════════
+# 🚀 PRODUCCIÓN Y DESPLIEGUE
+# ════════════════════════════════════════
+
+deploy:  ## 🚀 Despliegue en producción
+	docker compose -f docker-compose.prod.yml up -d --build
+
+teardown:  ## 💥 Detiene producción
+	docker compose -f docker-compose.prod.yml down
+
+# ════════════════════════════════════════
+# 📖 AYUDA Y DOCUMENTACIÓN
+# ════════════════════════════════════════
+
+help:  ## 📖 Ayuda básica de comandos
+	@echo -e "\n🌌 \033[1;36mAnuset-FINAL :: Comandos disponibles\033[0m"
+	@echo "────────────────────────────────────────────"
+	@awk 'BEGIN {FS = ":.*?## "}; /^[a-zA-Z0-9\-_]+:.*?## / {printf "✨ \033[1;33m%-25s\033[0m %s\n", $$1, $$2}' $(MAKEFILE_LIST) | sort
+	@echo -e "\n🐾 Usa \033[1;32mmake <comando>\033[0m para ejecutar. Que Anu te ilumine ✨"
+
+help-advanced:  ## 🧙 Ayuda extendida con rutas
+	@echo -e "\n🌌 \033[1;36mAnuset-FINAL :: Ayuda extendida\033[0m"
+	@echo "────────────────────────────────────────────"
+	@echo "📁 Carpeta del proyecto: $(CURDIR)"
+	@echo "📦 ZIP por defecto: $(ZIP_NAME)"
+	@echo "📜 Requisitos: Docker, Bash, Python3"
+	@echo "📑 Rutas clave:"
+	@echo " - scripts/: Scripts utilitarios (bash/py)"
+	@echo " - services/: Servicios IA simbólicos"
+	@echo " - backend/: API FastAPI"
+	@echo " - frontend/: Interfaz Vite + React"
+	@echo " - backups/: Snapshots y archivos guardados"
+	@echo ""
+	@echo "🔧 Variables útiles:"
+	@echo " - SERVICE=nombre     (logs, restart, etc.)"
+	@echo " - ZIP_NAME=archivo.zip"
+	@echo ""

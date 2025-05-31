@@ -1,0 +1,8 @@
+SocksPort 9050
+ControlPort 9051
+DataDirectory /home/saze/Anuset-FINAL/tor/data
+Log notice stdout
+ExitPolicy reject *:*
+DNSPort 9053
+VirtualAddrNetworkIPv4 10.192.0.0/10
+AutomapHostsOnResolve 1

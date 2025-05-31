@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#cba6f7" />
+  <link rel="manifest" href="/manifest.webmanifest" />
+  <link rel="icon" href="/iconokali.jpg" />
+  <link rel="stylesheet" href="/splash.css" />
+  <link rel="stylesheet" href="/font-console.css" />
+  <link rel="stylesheet" href="/input-glow.css" />
+  <link rel="stylesheet" href="/rize-reflejo.css" />
+  <link rel="stylesheet" href="/webui-button.css" />
+  <title>🐱 Anuset89 Ritual</title>
+</head>
+<body>
+  <header>
+    <img src="/iconokali.jpg" alt="Rize Icon" id="icon-rize" />
+    <audio controls id="player" src="/musicaOcean.mp3"></audio>
+  </header>
+
+  <main>
+    <h1 class="glitch-title">Creación por Anuset89 de tu IA</h1>
+    <form id="ritualForm">
+      <input name="name" placeholder="Nombre de la IA / Name" required />
+      <input name="temperature" placeholder="Sensibilidad 0.1 a 1 / Temperature" required />
+      <input name="objective" placeholder="Objetivo principal / Main goal" />
+      <input name="help" placeholder="¿Qué necesitás? / What do you need?" />
+      <textarea name="memory" placeholder="¿Qué debe recordar? / What to remember?"></textarea>
+      <textarea name="limits" placeholder="¿Qué no debe hacer? / Forbidden actions?"></textarea>
+      <input name="nickname" placeholder="¿Cómo te llamará? / Nickname" />
+      <input name="color" placeholder="Color favorito / Favorite color" />
+      <input name="quote" placeholder="Frase que te define / Quote" />
+      <button type="submit">🎉 Guardar configuración</button>
+    </form>
+    <a id="webui" href="http://localhost:8080">Entrar a WebUI</a>
+  </main>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const form = document.getElementById("ritualForm");
+      form.addEventListener("submit", e => {
+        e.preventDefault();
+        const data = Object.fromEntries(new FormData(form));
+        const jsonStr = JSON.stringify(data, null, 2);
+        const txtStr = Object.entries(data).map(([k, v]) => `${k}: ${v}`).join("\n");
+        const name = data.name || "ia";
+
+        const download = (blob, ext) => {
+          const a = document.createElement("a");
+          a.href = URL.createObjectURL(blob);
+          a.download = `ritual-${name}.${ext}`;
+          a.click();
+        };
+
+        download(new Blob([jsonStr], { type: "application/json" }), "json");
+        download(new Blob([txtStr], { type: "text/plain" }), "txt");
+
+        fetch("http://localhost:8000/generar", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: jsonStr
+        }).then(r => console.log("🧠 Enviado a backend:", r.status));
+
+        const pop = new Audio("/pop.mp3");
+        pop.play();
+      });
+    });
+  </script>
+</body>
+</html>

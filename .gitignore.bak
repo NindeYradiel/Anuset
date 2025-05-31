@@ -1,0 +1,44 @@
+# Python
+*.pyc
+*.pyo
+__pycache__/
+*.sqlite3
+*.log
+*.bak
+*.swp
+
+# Entornos y configuraciones
+.env
+.env.*
+.vscode/
+.idea/
+.DS_Store
+
+# Node.js / Frontend
+node_modules/
+dist/
+build/
+.cache/
+
+# Archivos comprimidos de salida (permitimos solo el último ZIP generado manualmente)
+*.tar
+*.tar.gz
+!Anuset-FINAL.zip
+
+# Archivos de empaquetado Python
+*.egg-info/
+
+# Ignora outputs temporales de pruebas o scripts
+/tmp/
+outputs/
+artifacts/
+
+# EXCLUSIONES ÚTILES - aseguran que lo importante SÍ esté
+!Makefile
+!Dockerfile
+!scripts/
+!services/
+!backend/
+!frontend/
+!requirements.txt
+!README.md

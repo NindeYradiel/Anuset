@@ -1,0 +1,196 @@
+version: '3.8'
+
+services:
+  animatediff:
+    build:
+      context: services/animatediff
+    container_name: anuset89-vault-animatediff
+    ports:
+      - "5001:8000"
+    volumes:
+      - ./data/animatediff:/app/data
+    networks:
+      - anuset_net
+
+  audio:
+    build:
+      context: services/audio
+    container_name: anuset89-vault-audio
+    ports:
+      - "5002:8000"
+    volumes:
+      - ./data/audio:/app/data
+    networks:
+      - anuset_net
+
+  codellama:
+    build:
+      context: services/codellama
+    container_name: anuset89-vault-codellama
+    ports:
+      - "5003:8000"
+    volumes:
+      - ./data/codellama:/app/data
+    networks:
+      - anuset_net
+
+  codigo:
+    build:
+      context: services/codigo
+    container_name: anuset89-vault-codigo
+    ports:
+      - "5004:8000"
+    volumes:
+      - ./data/codigo:/app/data
+    networks:
+      - anuset_net
+
+  comfyui:
+    build:
+      context: services/comfyui
+    container_name: anuset89-vault-comfyui
+    ports:
+      - "5005:8000"
+    volumes:
+      - ./data/comfyui:/app/data
+    networks:
+      - anuset_net
+
+  estilo:
+    build:
+      context: services/estilo
+    container_name: anuset89-vault-estilo
+    ports:
+      - "5006:8000"
+    volumes:
+      - ./data/estilo:/app/data
+    networks:
+      - anuset_net
+
+  imagen:
+    build:
+      context: services/imagen
+    container_name: anuset89-vault-imagen
+    ports:
+      - "5007:8000"
+    volumes:
+      - ./data/imagen:/app/data
+    networks:
+      - anuset_net
+
+  interaccion:
+    build:
+      context: services/interaccion
+    container_name: anuset89-vault-interaccion
+    ports:
+      - "5008:8000"
+    volumes:
+      - ./data/interaccion:/app/data
+    networks:
+      - anuset_net
+
+  memoria:
+    build:
+      context: services/memoria
+    container_name: anuset89-vault-memoria
+    ports:
+      - "5010:8000"
+    volumes:
+      - ./data/memoria:/app/data
+    networks:
+      - anuset_net
+
+  musica:
+    build:
+      context: services/musica
+    container_name: anuset89-vault-musica
+    ports:
+      - "5011:8000"
+    volumes:
+      - ./data/musica:/app/data
+    networks:
+      - anuset_net
+
+  musicgen:
+    build:
+      context: services/musicgen
+    container_name: anuset89-vault-musicgen
+    ports:
+      - "5012:8000"
+    volumes:
+      - ./data/musicgen:/app/data
+    networks:
+      - anuset_net
+
+  stableaudio:
+    build:
+      context: services/stableaudio
+    container_name: anuset89-vault-stableaudio
+    ports:
+      - "5013:8000"
+    volumes:
+      - ./data/stableaudio:/app/data
+    networks:
+      - anuset_net
+
+  video:
+    build:
+      context: services/video
+    container_name: anuset89-vault-video
+    ports:
+      - "5014:8000"
+    volumes:
+      - ./data/video:/app/data
+    networks:
+      - anuset_net
+
+  voz:
+    build:
+      context: services/voz
+    container_name: anuset89-vault-voz
+    ports:
+      - "5015:8000"
+    volumes:
+      - ./data/voz:/app/data
+    networks:
+      - anuset_net
+
+  xtts-es:
+    build:
+      context: services/xtts-es
+    container_name: anuset89-vault-xtts-es
+    ports:
+      - "5016:8000"
+    volumes:
+      - ./data/xtts-es:/app/data
+    networks:
+      - anuset_net
+
+  frontend:
+    image: anuset89-frontend:latest
+    build:
+      context: ./frontend
+    container_name: anuset89-frontend
+    ports:
+      - "3000:80"
+    networks:
+      - anuset_net
+
+  open-webui:
+    image: ghcr.io/open-webui/open-webui:latest
+    container_name: open-webui
+    restart: unless-stopped
+    ports:
+      - "8888:8080"
+    volumes:
+      - ./data:/app/data
+      - openwebui_data:/app/backend/data
+    networks:
+      - anuset_net
+
+volumes:
+  openwebui_data:
+
+networks:
+  anuset_net:
+    driver: bridge

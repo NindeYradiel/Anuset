@@ -1,0 +1,510 @@
+.:
+total 10720
+drwxr-xr-x  2 saze saze     4096 may 29 20:05 animatediff
+drwxr-xr-x  2 saze saze     4096 may 29 20:05 anu_visual
+-rwxr-xr-x  1 saze saze     1800 may 29 20:05 arranque_verificacion.py
+drwxr-xr-x  4 saze saze     4096 may 29 20:05 backend
+-rwxr-xr-x  1 saze saze        0 may 29 20:05 CACHED
+-rwxr-xr-x  1 saze saze        0 may 29 20:05 CANCELED
+-rwxr-xr-x  1 saze saze     1737 may 29 20:05 check_ia_status.py
+-rwxr-xr-x  1 saze saze     1790 may 29 20:05 cleanup_anu89.sh
+-rwxr-xr-x  1 saze saze     1577 may 29 20:05 copyassets.sh
+drwxr-xr-x  8 saze saze     4096 may 29 20:12 data
+-rwxr-xr-x  1 saze saze     5145 may 29 20:05 diag_anu89.sh
+-rwxr-xr-x  1 saze saze     2644 may 29 20:05 diagnostico.sh
+drwxr-xr-x  2 saze saze     4096 may 29 20:05 docker
+-rwxr-xr-x  1 saze saze     3883 may 29 20:05 docker-compose.generated.yml
+-rwxr-xr-x  1 saze saze     1274 may 29 20:05 docker-compose.override.yml
+-rw-r--r--  1 saze saze     1971 may 29 22:23 docker-compose.yml
+-rw-r--r--  1 saze saze      697 may 29 20:25 download_models_20250529_201239.log
+-rw-r--r--  1 saze saze        0 may 30 00:27 estructura.txt
+-rwxr-xr-x  1 saze saze      441 may 29 20:05 exportar_logs.sh
+-rwxr-xr-x  1 saze saze        0 may 29 20:05 exporting
+drwxr-xr-x  6 saze saze     4096 may 29 23:55 frontend
+-rwxr-xr-x  1 saze saze     1311 may 29 20:05 generate_compose.py
+-rwxr-xr-x  1 saze saze     1469 may 29 20:05 launch.sh
+-rwxr-xr-x  1 saze saze     1069 may 29 20:05 LICENSE
+-rwxr-xr-x  1 saze saze     2406 may 29 20:05 main_controller.py
+-rw-r--r--  1 saze saze     2630 may 29 23:55 Makefile
+drwxr-xr-x  9 root root     4096 may 29 21:20 models
+-rwxr-xr-x  1 saze saze        0 may 29 20:05 naming
+-rwxr-xr-x  1 saze saze      655 may 29 20:05 nginx.conf
+-rw-r--r--  1 saze saze       68 may 29 20:05 package.json
+-rwxr-xr-x  1 saze saze    55611 may 29 20:05 package-lock.json
+-rw-r--r--  1 saze saze  1938098 may 30 00:15 re
+-rwxr-xr-x  1 saze saze     7047 may 29 20:05 README.en.md
+-rwxr-xr-x  1 saze saze     2443 may 29 20:05 README.md
+-rwxr-xr-x  1 saze saze      727 may 29 20:05 restart_anu89.sh
+drwxr-xr-x  2 saze saze     4096 may 29 23:50 scripts
+-rwxr-xr-x  1 saze saze     2520 may 29 20:05 Scripts principales del sistema.md
+drwxr-xr-x 21 saze saze     4096 may 29 21:10 services
+-rw-r--r--  1 saze saze  8797705 may 29 22:29 services.zip
+-rwxr-xr-x  1 saze saze     1945 may 29 20:05 start-internal.sh
+-rwxr-xr-x  1 saze saze     1107 may 29 20:05 start.sh
+-rwxr-xr-x  1 saze saze      653 may 29 20:05 stop.sh
+-rwxr-xr-x  1 saze saze      854 may 29 20:05 sync_to_vault.sh
+drwxr-xr-x  2  101 65533    4096 may 29 20:05 tor
+-rwxr-xr-x  1 saze saze        0 may 29 20:05 transferring
+-rw-r--r--  1 saze saze     9665 may 29 23:31 tree
+-rwxr-xr-x  1 saze saze      535 may 29 20:05 watcher.py
+-rwxr-xr-x  1 saze saze      276 may 29 20:05 windows-launcher.bat
+-rwxr-xr-x  1 saze saze     1078 may 29 20:05 WINDOWS.md
+-rwxr-xr-x  1 saze saze        0 may 29 20:05 writing
+
+./animatediff:
+total 20
+-rw-r--r-- 1 saze saze  35 may 29 20:05 app.py
+-rw-r--r-- 1 saze saze 237 may 29 20:05 Dockerfile
+-rw-r--r-- 1 saze saze 198 may 29 20:05 download_models.sh
+-rwxr-xr-x 1 saze saze 147 may 29 20:05 entrypoint.sh
+-rw-r--r-- 1 saze saze  31 may 29 20:05 requirements.txt
+
+./anu_visual:
+total 12
+-rw-r--r-- 1 saze saze  653 may 29 20:05 AnuuAwakening.tsx
+-rw-r--r-- 1 saze saze 1473 may 29 20:05 AnuuCanvas.tsx
+-rw-r--r-- 1 saze saze  513 may 29 20:05 AnuuIcon.tsx
+
+./backend:
+total 32
+-rw-r--r-- 1 saze saze  435 may 29 23:39 Dockerfile
+-rw-r--r-- 1 saze saze   24 may 29 20:05 generator.py
+-rw-r--r-- 1 saze saze   65 may 29 20:05 main_controller.py
+-rw-r--r-- 1 saze saze 1234 may 29 20:05 main.py
+drwxr-xr-x 3 saze saze 4096 may 29 20:05 mem0
+-rw-r--r-- 1 saze saze   39 may 29 23:45 requirements.txt
+-rw-r--r-- 1 saze saze 1533 may 29 20:05 router_fastapi.py
+drwxr-xr-x 2 saze saze 4096 may 29 20:05 routes
+
+./backend/mem0:
+total 4
+drwxr-xr-x 2 saze saze 4096 may 29 20:05 rituales
+
+./backend/mem0/rituales:
+total 4
+-rw-r--r-- 1 saze saze 9 may 29 20:05 llave_conexion.txt
+
+./backend/routes:
+total 8
+-rw-r--r-- 1 saze saze  907 may 29 20:05 despertar.py
+-rw-r--r-- 1 saze saze 1235 may 29 20:05 rituales.py
+
+./data:
+total 24
+drwxr-xr-x 3 saze saze 4096 may 29 20:12 animatediff
+drwxr-xr-x 3 saze saze 4096 may 29 20:12 codellama
+drwxr-xr-x 3 saze saze 4096 may 29 20:12 memgpt
+drwxr-xr-x 3 saze saze 4096 may 29 20:12 stableaudio
+drwxr-xr-x 2 saze saze 4096 may 29 21:04 stable-diffusion
+drwxr-xr-x 4 saze saze 4096 may 29 21:10 xtts-es
+
+./data/animatediff:
+total 4
+drwxr-xr-x 2 saze saze 4096 may 29 21:02 models
+
+./data/animatediff/models:
+total 4
+-rw-r--r-- 1 saze saze 88 may 29 20:22 download_models_20250529_201239.log
+
+./data/codellama:
+total 4
+drwxr-xr-x 2 saze saze 4096 may 29 21:02 models
+
+./data/codellama/models:
+total 4
+-rw-r--r-- 1 saze saze 88 may 29 20:25 download_models_20250529_201239.log
+
+./data/memgpt:
+total 4
+drwxr-xr-x 2 saze saze 4096 may 29 21:02 models
+
+./data/memgpt/models:
+total 4
+-rw-r--r-- 1 saze saze 88 may 29 20:17 download_models_20250529_201239.log
+
+./data/stableaudio:
+total 4
+drwxr-xr-x 2 saze saze 4096 may 29 20:12 models
+
+./data/stableaudio/models:
+total 4
+-rw-r--r-- 1 saze saze 32 may 29 20:12 download_models_20250529_201239.log
+
+./data/stable-diffusion:
+total 0
+lrwxrwxrwx 1 saze saze 26 may 29 21:04 models -> /home/saze/Respaldo/models
+
+./data/xtts-es:
+total 8
+drwxr-xr-x 3 saze saze 4096 may 29 20:12 model
+drwxr-xr-x 2 saze saze 4096 may 29 21:10 models
+
+./data/xtts-es/model:
+total 8
+drwxr-xr-x 3 saze saze 4096 may 29 20:12 data
+-rw-r--r-- 1 saze saze   88 may 29 20:21 download_models_20250529_201239.log
+
+./data/xtts-es/model/data:
+total 4
+drwxr-xr-x 3 saze saze 4096 may 29 20:21 xtts-es
+
+./data/xtts-es/model/data/xtts-es:
+total 4
+drwxr-xr-x 4 saze saze 4096 may 29 20:21 model
+
+./data/xtts-es/model/data/xtts-es/model:
+total 2037708
+-rw-r--r-- 1 saze saze       4368 may 29 20:12 config.json
+-rw-r--r-- 1 saze saze  210514388 may 29 20:14 dvae.pth
+-rw-r--r-- 1 saze saze         32 may 29 20:12 hash.md5
+-rw-r--r-- 1 saze saze       4014 may 29 20:12 LICENSE.txt
+-rw-r--r-- 1 saze saze       1067 may 29 20:12 mel_stats.pth
+-rw-r--r-- 1 saze saze 1867929118 may 29 20:21 model.pth
+-rw-r--r-- 1 saze saze       4263 may 29 20:12 README.md
+drwxr-xr-x 2 saze saze       4096 may 29 20:12 samples
+-rw-r--r-- 1 saze saze    7754818 may 29 20:12 speakers_xtts.pth
+-rw-r--r-- 1 saze saze     361219 may 29 20:12 vocab.json
+
+./data/xtts-es/model/data/xtts-es/model/samples:
+total 2728
+-rw-r--r-- 1 saze saze 299066 may 29 20:12 de_sample.wav
+-rw-r--r-- 1 saze saze 299066 may 29 20:12 en_sample.wav
+-rw-r--r-- 1 saze saze 329786 may 29 20:12 es_sample.wav
+-rw-r--r-- 1 saze saze 432186 may 29 20:12 fr_sample.wav
+-rw-r--r-- 1 saze saze 284730 may 29 20:12 ja-sample.wav
+-rw-r--r-- 1 saze saze 445498 may 29 20:12 pt_sample.wav
+-rw-r--r-- 1 saze saze 299066 may 29 20:12 tr_sample.wav
+-rw-r--r-- 1 saze saze 383034 may 29 20:12 zh-cn-sample.wav
+
+./data/xtts-es/models:
+total 0
+
+./docker:
+total 8
+-rw-r--r-- 1 saze saze 230 may 29 20:05 Dockerfile.backend
+-rw-r--r-- 1 saze saze 255 may 29 20:05 Dockerfile.frontend
+
+./frontend:
+total 88
+drwxr-xr-x 2 saze saze  4096 may 29 20:05 assets
+-rw-r--r-- 1 saze saze   436 may 29 23:39 Dockerfile
+-rwxr-xr-x 1 saze saze   318 may 29 23:55 entrypoint.sh
+-rw-r--r-- 1 saze saze   844 may 29 20:05 eslint.config.js
+-rw-r--r-- 1 saze saze  3523 may 29 20:05 index.html
+-rw-r--r-- 1 saze saze   180 may 29 20:05 nginx.conf
+-rwxr-xr-x 1 saze saze   168 may 29 20:05 package.json
+-rw-r--r-- 1 saze saze 31027 may 29 20:05 package-lock.json
+drwxr-xr-x 2 saze saze  4096 may 29 20:05 public
+-rw-r--r-- 1 saze saze   856 may 29 20:05 README.md
+-rw-r--r-- 1 saze saze     0 may 29 20:05 requirements.txt
+-rw-r--r-- 1 saze saze   281 may 29 20:05 ritual.js
+drwxr-xr-x 4 saze saze  4096 may 29 20:05 src
+-rw-r--r-- 1 saze saze   719 may 29 20:05 style.css
+drwxr-xr-x 2 saze saze  4096 may 29 20:05 styles
+-rw-r--r-- 1 saze saze   291 may 29 20:05 vite.config.js
+
+./frontend/assets:
+total 4680
+-rw-r--r-- 1 saze saze 2300610 may 29 20:05 anuset89.png
+-rw-r--r-- 1 saze saze 1112788 may 29 20:05 foto_estrellas.jpg
+-rw-r--r-- 1 saze saze   61455 may 29 20:05 riiize.jpg
+-rw-r--r-- 1 saze saze 1310606 may 29 20:05 wallpaper.jpg
+
+./frontend/public:
+total 3996
+-rw-r--r-- 1 saze saze 2027211 may 29 20:05 fondo.png
+-rw-r--r-- 1 saze saze     153 may 29 20:05 font-console.css
+-rw-r--r-- 1 saze saze   61455 may 29 20:05 iconokali.jpg
+-rw-r--r-- 1 saze saze    3523 may 29 20:05 index.html
+-rw-r--r-- 1 saze saze     106 may 29 20:05 input-glow.css
+-rw-r--r-- 1 saze saze     469 may 29 20:05 manifest.webmanifest
+-rw-r--r-- 1 saze saze 1930387 may 29 20:05 musicaOcean.mp3
+-rw-r--r-- 1 saze saze   23364 may 29 20:05 particles.js
+-rw-r--r-- 1 saze saze     370 may 29 20:05 rize-reflejo.css
+-rw-r--r-- 1 saze saze     616 may 29 20:05 service-worker.js
+-rw-r--r-- 1 saze saze    1392 may 29 20:05 splash.css
+-rw-r--r-- 1 saze saze      56 may 29 20:05 splash.html
+-rw-r--r-- 1 saze saze    1497 may 29 20:05 vite.svg
+-rw-r--r-- 1 saze saze     418 may 29 20:05 webui-button.css
+
+./frontend/src:
+total 28
+-rw-r--r-- 1 saze saze  606 may 29 20:05 App.css
+-rw-r--r-- 1 saze saze  903 may 29 20:05 App.jsx
+-rw-r--r-- 1 saze saze  361 may 29 20:05 AppWrapper.jsx
+drwxr-xr-x 2 saze saze 4096 may 29 20:05 assets
+drwxr-xr-x 2 saze saze 4096 may 29 20:05 components
+-rw-r--r-- 1 saze saze 1154 may 29 20:05 index.css
+-rw-r--r-- 1 saze saze  553 may 29 20:05 main.jsx
+
+./frontend/src/assets:
+total 8
+-rw-r--r-- 1 saze saze 4126 may 29 20:05 react.svg
+
+./frontend/src/components:
+total 4
+-rw-r--r-- 1 saze saze 34 may 29 20:05 Ritual.jsx
+
+./frontend/styles:
+total 8
+-rw-r--r-- 1 saze saze 1019 may 29 20:05 ritual.css
+-rw-r--r-- 1 saze saze  874 may 29 20:05 splash.css
+
+./models:
+total 28
+drwxr-xr-x 2 root root 4096 may 29 21:20 animatediff
+drwxr-xr-x 2 root root 4096 may 29 21:20 codellama
+drwxr-xr-x 2 root root 4096 may 29 21:20 comfyui
+drwxr-xr-x 2 root root 4096 may 29 21:20 memgpt
+drwxr-xr-x 2 root root 4096 may 29 21:20 musicgen
+drwxr-xr-x 2 root root 4096 may 29 21:20 stableaudio
+drwxr-xr-x 2 root root 4096 may 29 21:20 xtts-es
+
+./models/animatediff:
+total 0
+
+./models/codellama:
+total 0
+
+./models/comfyui:
+total 0
+
+./models/memgpt:
+total 0
+
+./models/musicgen:
+total 0
+
+./models/stableaudio:
+total 0
+
+./models/xtts-es:
+total 0
+
+./scripts:
+total 112
+-rwxr-xr-x 1 saze saze  318 may 29 20:05 base_entrypoint.sh
+-rwxr-xr-x 1 saze saze 1779 may 29 23:39 check_dockerfile.py
+-rwxr-xr-x 1 saze saze 1596 may 29 20:05 check_model_versions.sh
+-rwxr-xr-x 1 saze saze  696 may 29 20:05 clean_empty_flags.sh
+-rwxr-xr-x 1 saze saze 3777 may 29 20:05 diag_anu89.sh
+-rwxr-xr-x 1 saze saze 2572 may 30 00:24 diag_requirements_full.py
+-rwxr-xr-x 1 saze saze 1860 may 29 23:45 diag_requirements.py
+-rwxr-xr-x 1 saze saze  865 may 29 20:05 docker_clean_all.sh
+-rwxr-xr-x 1 saze saze 3729 may 29 20:05 download_modelos.sh
+-rwxr-xr-x 1 saze saze 1943 may 29 21:02 download_models.sh
+-rwxr-xr-x 1 saze saze   86 may 29 20:05 fix_audit.sh
+-rwxr-xr-x 1 saze saze 1370 may 29 22:38 fix_dockerfiles.py
+-rwxr-xr-x 1 saze saze  810 may 29 23:57 fix_requirements_fastapi.py
+-rwxr-xr-x 1 saze saze   88 may 29 20:05 fix_vite.sh
+-rwxr-xr-x 1 saze saze 1281 may 29 23:08 generate_app_py.py
+-rwxr-xr-x 1 saze saze 1612 may 29 21:40 generate_service_ia.py
+-rwxr-xr-x 1 saze saze 1939 may 29 21:10 link_all.sh
+-rwxr-xr-x 1 saze saze 8407 may 29 20:12 main_controller2.py
+-rwxr-xr-x 1 saze saze 8469 may 29 21:25 main_controller.py
+-rwxr-xr-x 1 saze saze 2284 may 29 20:05 prepare_structure.sh
+-rwxr-xr-x 1 saze saze 5091 may 29 20:05 prepare_structure_UNIFICADO.sh
+-rw-r--r-- 1 saze saze 3995 may 29 23:51 requirements_report.md
+-rwxr-xr-x 1 saze saze 1233 may 29 20:05 restore-downloadmodels.sh
+
+./services:
+total 76
+drwxr-xr-x 2 saze saze 4096 may 29 23:39 animatediff
+drwxr-xr-x 3 saze saze 4096 may 29 23:39 audio
+lrwxrwxrwx 1 saze saze   25 may 29 21:10 backend -> /home/saze/Anuset/backend
+drwxr-xr-x 2 saze saze 4096 may 29 23:39 codellama
+drwxr-xr-x 3 saze saze 4096 may 29 23:39 codigo
+drwxr-xr-x 2 saze saze 4096 may 29 21:40 comfyui
+drwxr-xr-x 3 saze saze 4096 may 29 23:39 estilo
+lrwxrwxrwx 1 saze saze   26 may 29 21:10 frontend -> /home/saze/Anuset/frontend
+drwxr-xr-x 3 saze saze 4096 may 29 23:39 imagen
+drwxr-xr-x 3 saze saze 4096 may 29 23:39 interaccion
+drwxr-xr-x 2 saze saze 4096 may 29 23:39 mem0
+drwxr-xr-x 2 saze saze 4096 may 29 23:39 memgpt
+drwxr-xr-x 3 saze saze 4096 may 29 23:39 memoria
+drwxr-xr-x 3 saze saze 4096 may 29 23:39 musica
+drwxr-xr-x 2 saze saze 4096 may 29 23:39 musicgen
+drwxr-xr-x 2 saze saze 4096 may 29 23:39 openmemory
+drwxr-xr-x 2 saze saze 4096 may 29 23:39 stableaudio
+drwxr-xr-x 2 saze saze 4096 may 29 23:39 stable-diffusion
+drwxr-xr-x 3 saze saze 4096 may 29 23:39 video
+drwxr-xr-x 3 saze saze 4096 may 29 23:39 voz
+drwxr-xr-x 2 saze saze 4096 may 29 23:39 xtts-es
+
+./services/animatediff:
+total 16
+-rw-r--r-- 1 saze saze 127 may 29 21:40 app.py
+-rw-r--r-- 1 saze saze 439 may 29 23:39 Dockerfile
+-rwxr-xr-x 1 saze saze 318 may 29 20:05 entrypoint.sh
+-rw-r--r-- 1 saze saze  60 may 29 23:50 requirements.txt
+
+./services/audio:
+total 20
+-rw-r--r-- 1 saze saze     856 may 29 20:05 app.py
+-rw-r--r-- 1 saze saze     433 may 29 23:39 Dockerfile
+-rwxr-xr-x 1 saze saze     122 may 29 22:39 entrypoint.sh
+drwxr-xr-x 2 saze lpadmin 4096 may 29 21:20 __pycache__
+-rw-r--r-- 1 saze saze      32 may 29 23:50 requirements.txt
+
+./services/audio/__pycache__:
+total 4
+-rw-r--r-- 1 saze lpadmin 989 may 29 21:20 app.cpython-310.pyc
+
+./services/codellama:
+total 16
+-rw-r--r-- 1 saze saze 125 may 29 21:40 app.py
+-rw-r--r-- 1 saze saze 437 may 29 23:39 Dockerfile
+-rwxr-xr-x 1 saze saze 318 may 29 20:05 entrypoint.sh
+-rw-r--r-- 1 saze saze  41 may 29 23:50 requirements.txt
+
+./services/codigo:
+total 20
+-rw-r--r-- 1 saze saze     852 may 29 20:05 app.py
+-rw-r--r-- 1 saze saze     434 may 29 23:39 Dockerfile
+-rwxr-xr-x 1 saze saze     122 may 29 22:39 entrypoint.sh
+drwxr-xr-x 2 saze lpadmin 4096 may 29 21:20 __pycache__
+-rw-r--r-- 1 saze saze      32 may 29 23:50 requirements.txt
+
+./services/codigo/__pycache__:
+total 4
+-rw-r--r-- 1 saze lpadmin 985 may 29 21:20 app.cpython-310.pyc
+
+./services/comfyui:
+total 16
+-rw-r--r-- 1 saze saze 123 may 29 21:40 app.py
+-rw-r--r-- 1 saze saze 495 may 29 23:36 Dockerfile
+-rwxr-xr-x 1 saze saze 318 may 29 20:05 entrypoint.sh
+-rw-r--r-- 1 saze saze  41 may 29 23:50 requirements.txt
+
+./services/estilo:
+total 20
+-rw-r--r-- 1 saze saze     848 may 29 20:05 app.py
+-rw-r--r-- 1 saze saze     434 may 29 23:39 Dockerfile
+-rwxr-xr-x 1 saze saze     122 may 29 22:39 entrypoint.sh
+drwxr-xr-x 2 saze lpadmin 4096 may 29 21:20 __pycache__
+-rw-r--r-- 1 saze saze      42 may 29 23:50 requirements.txt
+
+./services/estilo/__pycache__:
+total 4
+-rw-r--r-- 1 saze lpadmin 981 may 29 21:20 app.cpython-310.pyc
+
+./services/imagen:
+total 20
+-rw-r--r-- 1 saze saze     873 may 29 20:05 app.py
+-rw-r--r-- 1 saze saze     434 may 29 23:39 Dockerfile
+-rwxr-xr-x 1 saze saze     122 may 29 22:39 entrypoint.sh
+drwxr-xr-x 2 saze lpadmin 4096 may 29 21:20 __pycache__
+-rw-r--r-- 1 saze saze      35 may 29 23:50 requirements.txt
+
+./services/imagen/__pycache__:
+total 4
+-rw-r--r-- 1 saze lpadmin 1006 may 29 21:20 app.cpython-310.pyc
+
+./services/interaccion:
+total 20
+-rw-r--r-- 1 saze saze     855 may 29 20:05 app.py
+-rw-r--r-- 1 saze saze     439 may 29 23:39 Dockerfile
+-rwxr-xr-x 1 saze saze     122 may 29 22:39 entrypoint.sh
+drwxr-xr-x 2 saze lpadmin 4096 may 29 21:20 __pycache__
+-rw-r--r-- 1 saze saze      43 may 29 23:50 requirements.txt
+
+./services/interaccion/__pycache__:
+total 4
+-rw-r--r-- 1 saze lpadmin 988 may 29 21:20 app.cpython-310.pyc
+
+./services/mem0:
+total 8
+-rw-r--r-- 1 saze saze 432 may 29 23:39 Dockerfile
+-rw-r--r-- 1 saze saze  30 may 29 23:45 requirements.txt
+
+./services/memgpt:
+total 16
+-rw-r--r-- 1 saze saze 122 may 29 21:40 app.py
+-rw-r--r-- 1 saze saze 434 may 29 23:39 Dockerfile
+-rwxr-xr-x 1 saze saze 318 may 29 20:05 entrypoint.sh
+-rw-r--r-- 1 saze saze  43 may 29 23:50 requirements.txt
+
+./services/memoria:
+total 20
+-rw-r--r-- 1 saze saze     849 may 29 20:05 app.py
+-rw-r--r-- 1 saze saze     435 may 29 23:39 Dockerfile
+-rwxr-xr-x 1 saze saze     122 may 29 22:39 entrypoint.sh
+drwxr-xr-x 2 saze lpadmin 4096 may 29 21:20 __pycache__
+-rw-r--r-- 1 saze saze      24 may 29 23:50 requirements.txt
+
+./services/memoria/__pycache__:
+total 4
+-rw-r--r-- 1 saze lpadmin 982 may 29 21:20 app.cpython-310.pyc
+
+./services/musica:
+total 20
+-rw-r--r-- 1 saze saze     851 may 29 20:05 app.py
+-rw-r--r-- 1 saze saze     434 may 29 23:39 Dockerfile
+-rwxr-xr-x 1 saze saze     122 may 29 22:39 entrypoint.sh
+drwxr-xr-x 2 saze lpadmin 4096 may 29 21:20 __pycache__
+-rw-r--r-- 1 saze saze      28 may 29 23:50 requirements.txt
+
+./services/musica/__pycache__:
+total 4
+-rw-r--r-- 1 saze lpadmin 984 may 29 21:20 app.cpython-310.pyc
+
+./services/musicgen:
+total 16
+-rw-r--r-- 1 saze saze 124 may 29 21:40 app.py
+-rw-r--r-- 1 saze saze 436 may 29 23:39 Dockerfile
+-rwxr-xr-x 1 saze saze 318 may 29 20:05 entrypoint.sh
+-rw-r--r-- 1 saze saze  49 may 29 23:50 requirements.txt
+
+./services/openmemory:
+total 8
+-rw-r--r-- 1 saze saze 438 may 29 23:39 Dockerfile
+-rw-r--r-- 1 saze saze  34 may 29 23:45 requirements.txt
+
+./services/stableaudio:
+total 16
+-rw-r--r-- 1 saze saze 127 may 29 21:40 app.py
+-rw-r--r-- 1 saze saze 439 may 29 23:39 Dockerfile
+-rwxr-xr-x 1 saze saze 318 may 29 20:05 entrypoint.sh
+-rw-r--r-- 1 saze saze  48 may 29 23:50 requirements.txt
+
+./services/stable-diffusion:
+total 16
+-rw-r--r-- 1 saze saze 132 may 29 21:40 app.py
+-rw-r--r-- 1 saze saze 444 may 29 23:39 Dockerfile
+-rwxr-xr-x 1 saze saze 318 may 29 20:05 entrypoint.sh
+-rw-r--r-- 1 saze saze  60 may 29 23:50 requirements.txt
+
+./services/video:
+total 20
+-rw-r--r-- 1 saze saze     864 may 29 20:05 app.py
+-rw-r--r-- 1 saze saze     433 may 29 23:39 Dockerfile
+-rwxr-xr-x 1 saze saze     122 may 29 22:39 entrypoint.sh
+drwxr-xr-x 2 saze lpadmin 4096 may 29 21:20 __pycache__
+-rw-r--r-- 1 saze saze      38 may 29 23:50 requirements.txt
+
+./services/video/__pycache__:
+total 4
+-rw-r--r-- 1 saze lpadmin 997 may 29 21:20 app.cpython-310.pyc
+
+./services/voz:
+total 20
+-rw-r--r-- 1 saze saze     836 may 29 20:05 app.py
+-rw-r--r-- 1 saze saze     431 may 29 23:39 Dockerfile
+-rwxr-xr-x 1 saze saze     122 may 29 22:39 entrypoint.sh
+drwxr-xr-x 2 saze lpadmin 4096 may 29 21:20 __pycache__
+-rw-r--r-- 1 saze saze      34 may 29 23:50 requirements.txt
+
+./services/voz/__pycache__:
+total 4
+-rw-r--r-- 1 saze lpadmin 969 may 29 21:20 app.cpython-310.pyc
+
+./services/xtts-es:
+total 16
+-rw-r--r-- 1 saze saze 123 may 29 21:40 app.py
+-rw-r--r-- 1 saze saze 435 may 29 23:39 Dockerfile
+-rwxr-xr-x 1 saze saze 318 may 29 20:05 entrypoint.sh
+-rw-r--r-- 1 saze saze  38 may 29 23:50 requirements.txt
+
+./tor:
+total 4
+-rw-r--r-- 1 101 65533 193 may 29 20:05 torrc

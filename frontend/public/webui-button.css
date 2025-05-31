@@ -1,0 +1,20 @@
+#webui {
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+    background: #000000aa;
+    border: 1px solid #cba6f7;
+    color: #cba6f7;
+    padding: 10px 15px;
+    border-radius: 12px;
+    text-decoration: none;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.95em;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 8px rgba(203, 166, 247, 0.4);
+}
+
+#webui:hover {
+    background: #1a1a1acc;
+    box-shadow: 0 0 14px rgba(203, 166, 247, 0.8);
+}

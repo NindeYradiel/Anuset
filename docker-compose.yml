@@ -1,0 +1,312 @@
+services:
+  # Servicio de Animatediff
+  animatediff:
+    container_name: animatediff
+    build:
+      context: ./services/animatediff
+    restart: unless-stopped
+    environment:
+      - HF_TOKEN=${HF_TOKEN}  # Token de Hugging Face desde la variable de entorno
+    ports: []
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:5000/health"]  # URL de healthcheck
+      interval: 30s
+      retries: 3
+      start_period: 10s
+      timeout: 10s
+    networks:
+      - anuset_net
+
+  # Servicio de Audio
+  audio:
+    container_name: audio
+    build:
+      context: ./services/audio
+    restart: unless-stopped
+    environment:
+      - HF_TOKEN=${HF_TOKEN}
+    ports: []
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:5000/status"]  # URL de healthcheck
+      interval: 30s
+      retries: 3
+      start_period: 10s
+      timeout: 10s
+    networks:
+      - anuset_net
+
+  # Servicio de Codellama
+  codellama:
+    container_name: codellama
+    build:
+      context: ./services/codellama
+    restart: unless-stopped
+    environment:
+      - HF_TOKEN=${HF_TOKEN}
+    ports: []
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:5000/health"]
+      interval: 30s
+      retries: 3
+      start_period: 10s
+      timeout: 10s
+    networks:
+      - anuset_net
+
+  # Servicio de Codigo
+  codigo:
+    container_name: codigo
+    build:
+      context: ./services/codigo
+    restart: unless-stopped
+    environment:
+      - HF_TOKEN=${HF_TOKEN}
+    ports: []
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:5000/health"]
+      interval: 30s
+      retries: 3
+      start_period: 10s
+      timeout: 10s
+    networks:
+      - anuset_net
+
+  # Servicio de ComfyUI
+  comfyui:
+    container_name: comfyui
+    build:
+      context: ./services/comfyui
+    restart: unless-stopped
+    environment:
+      - HF_TOKEN=${HF_TOKEN}
+    ports: []
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:5000/status"]
+      interval: 30s
+      retries: 3
+      start_period: 10s
+      timeout: 10s
+    networks:
+      - anuset_net
+
+  # Servicio de Estilo
+  estilo:
+    container_name: estilo
+    build:
+      context: ./services/estilo
+    restart: unless-stopped
+    environment:
+      - HF_TOKEN=${HF_TOKEN}
+    ports: []
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:5000/health"]
+      interval: 30s
+      retries: 3
+      start_period: 10s
+      timeout: 10s
+    networks:
+      - anuset_net
+
+  # Servicio de Imagen
+  imagen:
+    container_name: imagen
+    build:
+      context: ./services/imagen
+    restart: unless-stopped
+    environment:
+      - HF_TOKEN=${HF_TOKEN}
+    ports: []
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:5000/health"]
+      interval: 30s
+      retries: 3
+      start_period: 10s
+      timeout: 10s
+    networks:
+      - anuset_net
+
+  # Servicio de Interaccion
+  interaccion:
+    container_name: interaccion
+    build:
+      context: ./services/interaccion
+    restart: unless-stopped
+    environment:
+      - HF_TOKEN=${HF_TOKEN}
+    ports: []
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:5000/status"]
+      interval: 30s
+      retries: 3
+      start_period: 10s
+      timeout: 10s
+    networks:
+      - anuset_net
+
+  # Servicio de Mem0 (Memoria)
+  mem0:
+    container_name: mem0
+    build:
+      context: ./services/mem0
+    restart: unless-stopped
+    environment:
+      - HF_TOKEN=${HF_TOKEN}
+    volumes:
+      - ./data/mem0:/data/mem0  # Volumen para almacenar modelos de mem0
+    ports: []
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:5000/health"]
+      interval: 60s
+      retries: 3
+      start_period: 10s
+      timeout: 10s
+    networks:
+      - anuset_net
+
+  # Servicio de Memoria
+  memoria:
+    container_name: memoria
+    build:
+      context: ./services/memoria
+    restart: unless-stopped
+    environment:
+      - HF_TOKEN=${HF_TOKEN}
+    ports: []
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:5000/status"]
+      interval: 30s
+      retries: 3
+      start_period: 10s
+      timeout: 10s
+    networks:
+      - anuset_net
+
+  # Servicio de Musica
+  musica:
+    container_name: musica
+    build:
+      context: ./services/musica
+    restart: unless-stopped
+    environment:
+      - HF_TOKEN=${HF_TOKEN}
+    ports: []
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:5000/health"]
+      interval: 30s
+      retries: 3
+      start_period: 10s
+      timeout: 10s
+    networks:
+      - anuset_net
+
+  # Servicio de MusicGen
+  musicgen:
+    container_name: musicgen
+    build:
+      context: ./services/musicgen
+    restart: unless-stopped
+    environment:
+      - HF_TOKEN=${HF_TOKEN}
+    ports: []
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:5000/status"]
+      interval: 30s
+      retries: 3
+      start_period: 10s
+      timeout: 10s
+    networks:
+      - anuset_net
+
+  # Servicio de StableAudio
+  stableaudio:
+    container_name: stableaudio
+    build:
+      context: ./services/stableaudio
+    restart: unless-stopped
+    environment:
+      - HF_TOKEN=${HF_TOKEN}
+    ports: []
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:5000/health"]
+      interval: 30s
+      retries: 3
+      start_period: 10s
+      timeout: 10s
+    networks:
+      - anuset_net
+
+  # Servicio de Stable-Diffusion
+  stable-diffusion:
+    container_name: stable-diffusion
+    build:
+      context: ./services/stable-diffusion
+    restart: unless-stopped
+    environment:
+      - HF_TOKEN=${HF_TOKEN}
+    ports: []
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:5000/health"]
+      interval: 30s
+      retries: 3
+      start_period: 10s
+      timeout: 10s
+    networks:
+      - anuset_net
+
+  # Servicio de Video
+  video:
+    container_name: video
+    build:
+      context: ./services/video
+    restart: unless-stopped
+    environment:
+      - HF_TOKEN=${HF_TOKEN}
+    ports: []
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:5000/status"]
+      interval: 30s
+      retries: 3
+      start_period: 10s
+      timeout: 10s
+    networks:
+      - anuset_net
+
+  # Servicio de Voz
+  voz:
+    container_name: voz
+    build:
+      context: ./services/voz
+    restart: unless-stopped
+    environment:
+      - HF_TOKEN=${HF_TOKEN}
+    ports: []
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:5000/health"]
+      interval: 30s
+      retries: 3
+      start_period: 10s
+      timeout: 10s
+    networks:
+      - anuset_net
+
+  # Servicio de XTTS-ES
+  xtts-es:
+    container_name: xtts-es
+    build:
+      context: ./services/xtts-es
+    restart: unless-stopped
+    environment:
+      - HF_TOKEN=${HF_TOKEN}
+    ports: []
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:5000/status"]
+      interval: 30s
+      retries: 3
+      start_period: 10s
+      timeout: 10s
+    networks:
+      - anuset_net
+
+networks:
+  anuset_net:
+    driver: bridge

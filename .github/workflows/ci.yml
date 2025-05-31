@@ -1,0 +1,34 @@
+name: Anuset-FINAL CI
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  anuset-check:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 🔄 Clonar repositorio
+        uses: actions/checkout@v3
+
+      - name: 📦 Configurar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: 🧼 Asignar permisos a scripts
+        run: |
+          chmod +x scripts/*.sh || true
+          find services/ -type f -name '*.sh' -exec chmod +x {} +
+
+      - name: 🧪 Verificar estructura y sintaxis
+        run: make check-ci
+
+      - name: 📋 Diagnóstico requirements
+        run: make diag-req
+
+      - name: 🧪 Test completo IA
+        run: make test-all

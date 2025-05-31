@@ -1,0 +1,127 @@
+services
+├── animatediff
+│   ├── app.py
+│   ├── Dockerfile
+│   ├── download_models.sh
+│   ├── entrypoint.sh
+│   ├── models
+│   │   └── logs
+│   └── requirements.txt
+├── audio
+│   ├── app.py
+│   ├── Dockerfile
+│   ├── entrypoint.sh
+│   ├── __pycache__
+│   │   └── app.cpython-310.pyc
+│   └── requirements.txt
+├── codellama
+│   ├── app.py
+│   ├── Dockerfile
+│   ├── entrypoint.sh
+│   ├── models
+│   │   └── logs
+│   └── requirements.txt
+├── codigo
+│   ├── app.py
+│   ├── Dockerfile
+│   ├── entrypoint.sh
+│   ├── __pycache__
+│   │   └── app.cpython-310.pyc
+│   └── requirements.txt
+├── comfyui
+│   ├── app.py
+│   ├── Dockerfile
+│   ├── entrypoint.sh
+│   ├── models
+│   └── requirements.txt
+├── estilo
+│   ├── app.py
+│   ├── Dockerfile
+│   ├── entrypoint.sh
+│   ├── __pycache__
+│   │   └── app.cpython-310.pyc
+│   └── requirements.txt
+├── imagen
+│   ├── app.py
+│   ├── Dockerfile
+│   ├── entrypoint.sh
+│   ├── __pycache__
+│   │   └── app.cpython-310.pyc
+│   └── requirements.txt
+├── interaccion
+│   ├── app.py
+│   ├── Dockerfile
+│   ├── entrypoint.sh
+│   ├── __pycache__
+│   │   └── app.cpython-310.pyc
+│   └── requirements.txt
+├── mem0
+│   ├── Dockerfile
+│   └── requirements.txt
+├── memgpt
+│   ├── app.py
+│   ├── Dockerfile
+│   ├── entrypoint.sh
+│   ├── models
+│   │   └── logs
+│   └── requirements.txt
+├── memoria
+│   ├── app.py
+│   ├── Dockerfile
+│   ├── entrypoint.sh
+│   ├── __pycache__
+│   │   └── app.cpython-310.pyc
+│   └── requirements.txt
+├── musica
+│   ├── app.py
+│   ├── Dockerfile
+│   ├── entrypoint.sh
+│   ├── __pycache__
+│   │   └── app.cpython-310.pyc
+│   └── requirements.txt
+├── musicgen
+│   ├── app.py
+│   ├── Dockerfile
+│   ├── entrypoint.sh
+│   ├── models
+│   └── requirements.txt
+├── openmemory
+│   ├── Dockerfile
+│   └── requirements.txt
+├── stableaudio
+│   ├── app.py
+│   ├── Dockerfile
+│   ├── entrypoint.sh
+│   ├── models
+│   │   └── logs
+│   └── requirements.txt
+├── stable-diffusion
+│   ├── app.py
+│   ├── Dockerfile
+│   ├── entrypoint.sh
+│   ├── models
+│   │   └── logs
+│   └── requirements.txt
+├── video
+│   ├── app.py
+│   ├── Dockerfile
+│   ├── entrypoint.sh
+│   ├── __pycache__
+│   │   └── app.cpython-310.pyc
+│   └── requirements.txt
+├── voz
+│   ├── app.py
+│   ├── Dockerfile
+│   ├── entrypoint.sh
+│   ├── __pycache__
+│   │   └── app.cpython-310.pyc
+│   └── requirements.txt
+└── xtts-es
+    ├── app.py
+    ├── Dockerfile
+    ├── entrypoint.sh
+    ├── models
+    │   └── logs
+    └── requirements.txt
+
+43 directories, 82 files

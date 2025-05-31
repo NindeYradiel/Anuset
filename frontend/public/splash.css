@@ -1,0 +1,57 @@
+body {
+    background-image: url('/fondo.png');
+    background-attachment: fixed;  /* Efecto parallax */
+    background-size: cover;
+    font-family: 'Arial', sans-serif;
+}
+
+.btn-entrar {
+    background-color: #cba6f7;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-entrar:hover {
+    background-color: #9e7cf7; /* Efecto hover */
+    transform: scale(1.1);  /* Aumento del tamaño */
+}
+
+.error {
+    color: red;
+    font-size: 14px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 300px;
+    margin: 0 auto;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+input {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    margin: 5px 0;
+}
+
+button {
+    padding: 10px;
+    background-color: #9e7cf7;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #cba6f7; /* Efecto hover */
+}

@@ -1,0 +1,104 @@
+.
+├── animatediff
+│   └── models
+├── anu_visual
+├── archives
+├── backend
+│   ├── app
+│   ├── logs
+│   └── model-cache
+├── backups
+│   ├── 2025-05-30-0401
+│   ├── scripts_20250530_043704
+│   ├── scripts_20250530_045349
+│   ├── scripts_20250530_050329
+│   ├── scripts_20250530_050338
+│   ├── scripts_20250530_050350
+│   ├── scripts_20250530_050351
+│   ├── scripts_20250530_050359
+│   ├── scripts_20250530_050416
+│   ├── scripts_20250530_051324
+│   ├── scripts_20250530_051523
+│   ├── scripts_20250530_051524
+│   ├── scripts_20250530_054125
+│   ├── scripts_20250530_054252
+│   ├── scripts_20250530_060728
+│   ├── scripts_20250530_061444
+│   ├── scripts_20250530_062238
+│   ├── scripts_20250530_064006
+│   ├── scripts_20250530_064028
+│   ├── scripts_20250530_064036
+│   ├── scripts_20250530_064044
+│   ├── scripts_20250530_064055
+│   ├── scripts_20250530_135149
+│   ├── scripts_20250530_141344
+│   ├── scripts_20250530_141358
+│   ├── scripts_20250530_141635
+│   └── scripts_20250530_141857
+├── data
+│   ├── animatediff
+│   ├── codellama
+│   ├── memgpt
+│   ├── stableaudio
+│   ├── stable-diffusion
+│   └── xtts-es
+├── docker
+├── docker-volumes
+├── frontend
+│   ├── dist
+│   └── src
+├── imagen
+│   ├── animatediff
+│   ├── comfyui
+│   └── stable-diffusion
+├── memoria
+│   └── memgpt
+├── model-cache
+├── models
+│   ├── animatediff
+│   ├── codellama
+│   ├── comfyui
+│   ├── memgpt
+│   ├── musicgen
+│   ├── stableaudio
+│   ├── stable-diffusion
+│   └── xtts-es
+├── musica
+│   ├── musicgen
+│   └── stableaudio
+├── scripts
+├── services
+│   ├── animatediff -> ../imagen/animatediff
+│   ├── audio
+│   ├── backend
+│   ├── codellama
+│   ├── codigo
+│   ├── comfyui -> ../imagen/comfyui
+│   ├── estilo
+│   ├── frontend
+│   ├── imagen
+│   ├── interaccion
+│   ├── mem0
+│   ├── memgpt -> ../memoria/memgpt
+│   ├── memoria
+│   ├── musica
+│   ├── musicgen -> ../musica/musicgen
+│   ├── openmemory
+│   ├── stableaudio -> ../musica/stableaudio
+│   ├── stable-diffusion -> ../imagen/stable-diffusion
+│   ├── texto
+│   ├── video
+│   ├── voz
+│   └── xtts-es -> ../voz/xtts-es
+├── tmp
+├── tor
+├── volumes
+│   ├── cache
+│   ├── logs
+│   ├── models
+│   ├── outputs
+│   └── tmp
+└── voz
+    └── xtts-es
+
+102 directories
